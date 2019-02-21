@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="./mysql-connector-java-8.0.12.jar"/>
+
+    <context id="mysql" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- nullCatalogMeansCurrent=true jdbc高版本问题 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/spring_boot?nullCatalogMeansCurrent=true"
+                        userId="root"
+                        password="password">
+            <property name="useSSL" value="false"/>
+            <property name="characterEncoding" value="utf8"/>
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="cn.com.springboot.generator.entity"
+                            targetProject="../spring-boot-myproject-service/src/main/java">
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="cn.com.springboot.generator.mapper"
+                         targetProject="../spring-boot-myproject-service/src/main/java">
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="mapper" targetPackage="cn.com.springboot.generator.mapper"
+                             targetProject="../spring-boot-myproject-service/src/main/java">
+        </javaClientGenerator>
+
+        <table schema="spring_boot"
+               tableName="activity"
+               domainObjectName="Activity"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <ignoreColumn column="activity_student_code"/>
+        </table>
+    </context>
+
+</generatorConfiguration>
