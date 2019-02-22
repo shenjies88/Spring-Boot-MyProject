@@ -65,6 +65,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-gateway-mvc</artifactId>
         </dependency>
+        <!--aop-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>
