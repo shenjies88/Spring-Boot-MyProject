@@ -11,15 +11,17 @@ logging:
         springboot: debug
 spring:
   datasource:
-    url: jdbc:mysql://d-mysql:3306/mysql?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2b8
+    url: jdbc:mysql://s-mysql:3306/mysql?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2b8
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: update
     show-sql: true
+  rabbitmq:
+    host: s-rabbit
+    port: 5672
 mybatis:
   mapper-locations: classpath:cn/com/springboot/mapper/*.xml
   configuration:
