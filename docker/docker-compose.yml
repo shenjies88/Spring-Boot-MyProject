@@ -19,7 +19,7 @@ services:
     build:
       context: ./
       dockerfile: dockerfile-app
-    image: my-spring-boot
+    image: pring-boot
     ports:
       - "8080:8080"
     depends_on:
