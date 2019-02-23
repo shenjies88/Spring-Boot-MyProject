@@ -20,11 +20,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  mail:
-    host: smtp.qq.com
-    username: 314337584@qq.com
-    password: rbehprgvldikbhec
-    default-encoding: UTF-8
 mybatis:
   mapper-locations: classpath:cn/com/springboot/mapper/*.xml
   configuration:
