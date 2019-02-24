@@ -2,12 +2,14 @@ package cn.com.springboot.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 返回的Http数据结构
  */
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class HttpResult<T> {
 
     /**
