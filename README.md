@@ -1,5 +1,5 @@
 # MyStaging
-部分功能需要去掉注释，请自行摸索
+功能需要去调注释，自行摸索
 ## Request
 - JDK11
 ## framework
