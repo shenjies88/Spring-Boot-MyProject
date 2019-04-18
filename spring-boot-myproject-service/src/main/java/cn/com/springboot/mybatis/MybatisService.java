@@ -1,7 +1,7 @@
-package cn.com.springboot.service;
+package cn.com.springboot.mybatis;
 
 import cn.com.springboot.entity.MybatisEntity;
-import cn.com.springboot.mapper.MybatisMapper;
+import cn.com.springboot.mybatis.MybatisMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

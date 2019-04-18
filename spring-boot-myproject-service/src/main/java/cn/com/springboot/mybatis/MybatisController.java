@@ -1,8 +1,7 @@
-package cn.com.springboot.controller;
+package cn.com.springboot.mybatis;
 
 import cn.com.springboot.common.HttpResult;
 import cn.com.springboot.entity.MybatisEntity;
-import cn.com.springboot.service.MybatisService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;

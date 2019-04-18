@@ -29,5 +29,6 @@ spring:
     port: 5672
 # mybatis
 mybatis:
+  mapper-locations: classpath:cn/com/springboot/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true

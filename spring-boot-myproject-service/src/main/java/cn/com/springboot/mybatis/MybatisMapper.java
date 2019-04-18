@@ -1,4 +1,4 @@
-package cn.com.springboot.mapper;
+package cn.com.springboot.mybatis;
 
 import cn.com.springboot.entity.MybatisEntity;
 import org.apache.ibatis.annotations.Mapper;

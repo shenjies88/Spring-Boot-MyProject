@@ -26,7 +26,7 @@ services:
   s-spring-boot:
     container_name: d-spring-boot
     build:
-      context: ./
+      context: .
       dockerfile: dockerfile-app
     image: spring-boot:v1
     ports:
