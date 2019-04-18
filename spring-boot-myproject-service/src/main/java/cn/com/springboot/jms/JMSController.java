@@ -1,6 +1,6 @@
 package cn.com.springboot.jms;
 
-import cn.com.springboot.common.HttpResult;
+import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @Api(tags = "JMS消息队列")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequestMapping("/jms")
 @RestController
 public class JMSController {

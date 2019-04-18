@@ -1,7 +1,6 @@
 package cn.com.springboot.mybatis;
 
-import cn.com.springboot.common.HttpResult;
-import cn.com.springboot.entity.MybatisEntity;
+import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Api(tags = "Mybatis模板")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequestMapping("/mybatis")
 @RestController
 public class MybatisController {

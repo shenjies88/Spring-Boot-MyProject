@@ -1,6 +1,6 @@
 package cn.com.springboot.jpa;
 
-import cn.com.springboot.common.HttpResult;
+import cn.com.springboot.HttpResult;
 import cn.com.springboot.common.aop.LoggerManage;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;

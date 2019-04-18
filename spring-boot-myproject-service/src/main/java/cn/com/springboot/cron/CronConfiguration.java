@@ -1,4 +1,4 @@
-package cn.com.springboot.config;
+package cn.com.springboot.cron;
 
 /**
  * 定时配置

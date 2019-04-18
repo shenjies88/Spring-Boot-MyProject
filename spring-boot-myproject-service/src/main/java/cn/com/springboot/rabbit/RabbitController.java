@@ -1,8 +1,9 @@
 package cn.com.springboot.rabbit;
 
-import cn.com.springboot.common.HttpResult;
+import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,11 @@ import static cn.com.springboot.rabbit.RabbitConfig.TOPIC_EXCHANGE_NAME;
 
 @Api(tags = "Rabbit消息队列")
 @Slf4j
+//@AllArgsConstructor
 @RequestMapping("/rabbit")
 @RestController
 public class RabbitController {
 
-    @Autowired
     private RabbitTemplate rabbitTemplate;
 
     @ApiOperation("两个队列都能接受")

@@ -14,7 +14,6 @@ import java.util.Objects;
  * swager配置
  */
 @Profile("dev")
-@EnableSwagger2
 @Configuration
 public class SwaggerConfiguration {
 

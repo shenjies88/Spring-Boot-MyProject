@@ -1,6 +1,5 @@
 package cn.com.springboot.mybatis;
 
-import cn.com.springboot.entity.MybatisEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

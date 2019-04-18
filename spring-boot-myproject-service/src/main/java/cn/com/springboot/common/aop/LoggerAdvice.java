@@ -11,8 +11,8 @@ import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Service;
 
 
-@Aspect
 @Slf4j
+@Aspect
 @Service
 public class LoggerAdvice {
 

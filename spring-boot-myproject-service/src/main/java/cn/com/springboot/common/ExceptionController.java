@@ -1,5 +1,6 @@
 package cn.com.springboot.common;
 
+import cn.com.springboot.HttpResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

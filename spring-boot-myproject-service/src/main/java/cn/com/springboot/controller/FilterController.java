@@ -1,6 +1,6 @@
 package cn.com.springboot.controller;
 
-import cn.com.springboot.common.HttpResult;
+import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

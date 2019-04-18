@@ -1,9 +1,11 @@
-package cn.com.springboot.entity;
+package cn.com.springboot.mybatis;
 
 import lombok.Data;
 
 /**
  * mybatis的实体类
+ *
+ * 连表
  */
 @Data
 public class MybatisEntity {
