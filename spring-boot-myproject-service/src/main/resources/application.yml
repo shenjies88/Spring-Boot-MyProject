@@ -5,5 +5,5 @@ spring:
     name: MyProject
   profiles:
     active: dev
-  esources:
+  resources:
     static-locations: file:static/dist
