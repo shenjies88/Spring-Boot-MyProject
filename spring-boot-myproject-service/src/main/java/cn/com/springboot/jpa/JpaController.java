@@ -3,7 +3,6 @@ package cn.com.springboot.jpa;
 import cn.com.springboot.common.HttpResult;
 import cn.com.springboot.common.aop.LoggerManage;
 import io.swagger.annotations.Api;
-import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
  * @date 2018/10/18
  */
 @Api(tags = "JPA模板")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RequestMapping("/jpa")
 @RestController
 public class JpaController {

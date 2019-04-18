@@ -1,6 +1,5 @@
 package cn.com.springboot.common;
 
-import cn.com.springboot.web.ParameterRequestWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 

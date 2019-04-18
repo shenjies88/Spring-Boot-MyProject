@@ -20,7 +20,7 @@
             <artifactId>spring-boot-myproject-interface</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <!--swagger-->
+        <!--Swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -29,7 +29,7 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
         </dependency>
-        <!--spring boot-->
+        <!--Spring Boot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -60,23 +60,23 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-gateway-mvc</artifactId>
         </dependency>
-        <!--aop-->
+        <!--Aop-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-        <!--mysql-->
+        <!--MySql-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!--mybatis-->
+        <!--Mybatis-->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
-        <!--lombok-->
+        <!--Lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
