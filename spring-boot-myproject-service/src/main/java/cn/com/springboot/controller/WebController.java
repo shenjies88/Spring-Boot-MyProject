@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author shenjies88
  * @since 2019-04-18-11:35
  */
-@Api(tags = "学习前端")
+@Api(tags = "前端学习")
 @RequestMapping("/web")
 @RestController
 public class WebController {
