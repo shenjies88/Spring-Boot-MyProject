@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * mybatis的实体类
- *
+ * <p>
  * 连表
  */
 @Data
