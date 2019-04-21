@@ -14,7 +14,7 @@ create table student
   comment '性别',
   constraint myspringboot_student_student_code_uindex
   unique (student_code)
-);
+)comment 'mybatis 学生';
 
 insert into student (student_code, name, age, sex) values
   ('1452200111', '张三', '18', '男'),
@@ -38,7 +38,7 @@ create table activity
   comment '课程',
   constraint activity_activity_student_code_uindex
   unique (activity_student_code)
-);
+)comment 'mybatis 学生';
 
 insert into activity (activity_student_code, sports, student_organization, course) values
   ('1452200111', '足球', '摄影协会', '自动控制原理'),
