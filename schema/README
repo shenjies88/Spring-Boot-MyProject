@@ -1,0 +1,10 @@
+确保容器名为mysql
+
+进入容器内
+./enter
+
+切换目录
+cd schema
+
+创建数据库
+./create
