@@ -24,6 +24,7 @@ public class Application {
             log.info("name {}", helloWorld.getHelloWorldProperties().getName());
             log.info("sex {}", helloWorld.getHelloWorldProperties().getSex());
             log.info("age {}", helloWorld.getHelloWorldProperties().getAge());
+            log.info("enabled {}", helloWorld.getHelloWorldProperties().getEnabled());
         }
     }
 

@@ -20,7 +20,7 @@ public class HelloWorldAutoConfiguration {
     @Autowired
     private HelloWorldProperties helloWorldProperties;
 
-    @ConditionalOnProperty(prefix = "hello-world", value = "name", matchIfMissing = true)
+    @ConditionalOnProperty(prefix = "hello-world", value = "enabled",havingValue = "true", matchIfMissing = true)
     @ConditionalOnMissingBean(HelloWorld.class)
     @Bean
     public HelloWorld helloWorld() {
