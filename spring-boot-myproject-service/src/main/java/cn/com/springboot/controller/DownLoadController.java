@@ -12,10 +12,9 @@ public class DownLoadController {
 
     public void downLoad(HttpServletResponse response) throws UnsupportedEncodingException {
 
-        response.setContentType("application/vnd.ms-excel;charset=UTF-8");
+        response.setContentType("application/x-download;charset=UTF-8");
         response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode("文件名.xlsx", "UTF-8"));
-        response.setHeader("fileName", URLEncoder.encode("文件名.xlsx", "UTF-8"));
-//        Files.copy(path, response.getOutputStream());
+//        Files.copy(path, response.getOutputStream()); 写入输出流
 
     }
 }
