@@ -24,7 +24,6 @@ public class HelloWorldAutoConfiguration {
     @ConditionalOnMissingBean(HelloWorld.class)
     @Bean
     public HelloWorld helloWorld() {
-        HelloWorld helloWorld = new HelloWorld(helloWorldProperties);
-        return helloWorld;
+        return new HelloWorld(helloWorldProperties);
     }
 }

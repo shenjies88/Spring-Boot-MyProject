@@ -41,9 +41,11 @@ public class Page<T> {
 //      pageIndex 等于1 并且 pageSize <= List.size，可以截取
         if (pageIndex == 1 && pageSize <= count) {
             list = list.subList(0, pageSize);
+
 //      pageIndex 大于1 并且 offset + pageSize <= list.size， 可以截取
         } else if (pageIndex > 1 && offset + pageSize <= count) {
             list = list.subList(offset, offset + pageSize);
+
 //      pageIndex 大于1 并且 offset + pageSize > list.size，可以截取
         } else if (offset > 1 && offset + pageSize > count) {
             list = list.subList(offset, list.size());
@@ -63,4 +65,5 @@ public class Page<T> {
         }
         return new Page(list, pageSize, pageIndex, pageNum, count);
     }
+
 }
