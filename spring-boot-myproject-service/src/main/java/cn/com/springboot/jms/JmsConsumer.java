@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class JmsConsumer {
 
-    //    @JmsListener(destination = "logging.queue")
+    //        @JmsListener(destination = "logging.queue")
     public void consume(@Payload String message) {
         log.info("Consume: {}", message);
     }

@@ -7,3 +7,9 @@ spring:
     active: dev
   resources:
     static-locations: file:static/dist
+
+hello-world:
+  name: 'Foo'
+  age: 20
+  sex: 'm'
+
