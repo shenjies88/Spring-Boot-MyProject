@@ -1,10 +1,3 @@
-确保容器名为mysql
+schema.sql建库
 
-进入容器内
-./enter
-
-切换目录
-cd schema
-
-创建数据库
-./create
+*_data.sql 建表插入数据

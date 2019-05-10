@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd `dirname $0`
-
-docker cp -a ../schema $(docker ps | grep mysql |  awk '{print $1}'):/schema && \
-
-docker exec -it $(docker ps | grep mysql |  awk '{print $1}') bash
-

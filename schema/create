@@ -1,4 +1,0 @@
-mysql -u root -ppassword<schema.sql # && \
-mysql -u root -ppassword<exercise_data.sql && \
-mysql -u root -ppassword<jpa_data.sql && \
-mysql -u root -ppassword<mybatis_data.sql

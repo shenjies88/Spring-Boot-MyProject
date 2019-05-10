@@ -31,17 +31,17 @@ public class ProxyController {
         Arrays.stream(keys).forEach(k -> proxy.header(k, request.getHeader(k)));
     }
 
-    @ApiOperation("我是哈哈哈")
-    @GetMapping("/hahaha")
+    @ApiOperation("我是接受者")
+    @GetMapping("/receive")
     public HttpResult hahaha() {
-        return HttpResult.success("哈哈哈");
+        return HttpResult.success("收到代理");
     }
 
-    @ApiOperation("代理到哈哈哈")
+    @ApiOperation("代理到接受者")
     @GetMapping("/proxy/**")
     public ResponseEntity<?> proxy(ProxyExchange<byte[]> proxy, HttpServletRequest request) throws IOException {
         addOriginHeaders(request, proxy);
-        var url = "http://localhost:8080/hahaha" + "?" + request.getQueryString();
+        var url = "http://localhost:8080/receive" + "?" + request.getQueryString();
 //        实际情况，用switch判断各种方法
 //        post方法不用加body，具体可以参考源码
         return proxy.uri(url).get();
