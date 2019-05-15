@@ -10,7 +10,7 @@ import java.util.List;
  * @author sj
  * @date 2018/10/18
  */
-@Api(tags = "JPA模板")
+@Api(tags = "JPA模板-需要去注释")
 //@AllArgsConstructor
 @RequestMapping("/jpa")
 @RestController

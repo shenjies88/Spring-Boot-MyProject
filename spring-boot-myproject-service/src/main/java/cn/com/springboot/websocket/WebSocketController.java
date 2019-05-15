@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.util.HtmlUtils;
 
-@Api(tags = "WebSocket模板")
+@Api(tags = "WebSocket模板-需要去注释")
 @RequestMapping("/websocket")
 @Controller
 public class WebSocketController {

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = "JMS消息队列")
+@Api(tags = "JMS消息队列-需要去注释")
 //@AllArgsConstructor
 @RequestMapping("/jms")
 @RestController
