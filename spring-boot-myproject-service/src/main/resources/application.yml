@@ -5,8 +5,6 @@ spring:
     name: MyProject
   profiles:
     active: dev
-  resources:
-    static-locations: file:static/dist
 
 hello-world:
   name: 'Foo'

@@ -20,8 +20,6 @@ public class LoggerAdvice {
     @Before("within(cn.com.springboot..*) && @annotation(loggerManage)")
     public void addBeforeLogger(JoinPoint joinPoint, LoggerManage loggerManage) {
         log.info("执行 " + loggerManage.description() + " 开始");
-        log.info(joinPoint.getSignature().toString());
-//        log.info(parseParames(joinPoint.getArgs()));
     }
 
     @AfterReturning("within(cn.com.springboot..*) && @annotation(loggerManage)")

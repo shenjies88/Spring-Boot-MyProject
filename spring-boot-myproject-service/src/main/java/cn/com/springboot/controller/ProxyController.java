@@ -1,6 +1,7 @@
 package cn.com.springboot.controller;
 
 import cn.com.springboot.HttpResult;
+import cn.com.springboot.common.aop.LoggerManage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.cloud.gateway.mvc.ProxyExchange;
@@ -32,16 +33,17 @@ public class ProxyController {
     }
 
     @ApiOperation("我是接受者")
-    @GetMapping("/receive")
+    @GetMapping("/proxy/receive")
     public HttpResult hahaha() {
         return HttpResult.success("收到代理");
     }
 
+    @LoggerManage(description = "ProxyController-proxy")
     @ApiOperation("代理到接受者")
-    @GetMapping("/proxy/**")
+    @GetMapping("/proxy/send")
     public ResponseEntity<?> proxy(ProxyExchange<byte[]> proxy, HttpServletRequest request) throws IOException {
         addOriginHeaders(request, proxy);
-        var url = "http://localhost:8080/receive" + "?" + request.getQueryString();
+        var url = "http://localhost:8080/proxy/receive" + "?" + request.getQueryString();
 //        实际情况，用switch判断各种方法
 //        post方法不用加body，具体可以参考源码
         return proxy.uri(url).get();

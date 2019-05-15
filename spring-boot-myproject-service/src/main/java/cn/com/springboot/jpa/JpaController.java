@@ -25,7 +25,6 @@ public class JpaController {
         return HttpResult.success(players);
     }
 
-    @LoggerManage(description = "JpaController-addBarcelonaPlayer")
     @PostMapping("/add")
     public HttpResult addBarcelonaPlayer(@RequestParam("name") String name,
                                          @RequestParam("position") String position,
