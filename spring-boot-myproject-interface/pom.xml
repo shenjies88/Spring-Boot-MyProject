@@ -9,8 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <name>interface</name>
-
+    <name>spring-boot-myproject-interface</name>
     <artifactId>spring-boot-myproject-interface</artifactId>
 
     <dependencies>

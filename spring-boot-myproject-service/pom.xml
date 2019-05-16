@@ -10,15 +10,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <name>service</name>
-
+    <name>spring-boot-myproject-service</name>
     <artifactId>spring-boot-myproject-service</artifactId>
 
     <dependencies>
 
         <dependency>
             <groupId>com.springboot.myproject</groupId>
-            <artifactId>starter</artifactId>
+            <artifactId>spring-boot-myproject-starter</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 

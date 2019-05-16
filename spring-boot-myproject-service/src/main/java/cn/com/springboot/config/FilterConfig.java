@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @author sj
  * @date 2018/10/27
  */
+@SuppressWarnings("unchecked")
 @Configuration
 public class FilterConfig {
 

@@ -2,6 +2,7 @@ package cn.com.springboot.jpa;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
  * @date 2018/10/18
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 @Entity
 public class Player extends BaseEntity {
 

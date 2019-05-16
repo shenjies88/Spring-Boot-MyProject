@@ -13,6 +13,7 @@ import java.util.List;
  * @author shenjies88
  * @since 2019-02-22-08:46
  */
+@SuppressWarnings("unchecked")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
