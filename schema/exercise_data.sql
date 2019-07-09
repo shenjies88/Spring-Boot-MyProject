@@ -19,8 +19,6 @@ values ('c1', 11, '2019-04-11', 'n1'),
        ('c3', 13, '2019-04-13', 'n3'),
        ('c4', 14, '2019-04-14', 'n4');
 
-
-
 create table if not exists union_index
 (
     id       int auto_increment

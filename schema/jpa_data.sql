@@ -1,6 +1,5 @@
 # 表jpa自动创建
 USE spring_boot;
-
 create table if not exists spring_boot.team
 (
     id          bigint auto_increment
