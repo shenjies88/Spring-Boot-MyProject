@@ -28,8 +28,7 @@ public class Application {
 
     @Autowired
     public void setHelloWorld(HelloWorld helloWorld) {
-        Application.helloWorld = helloWorld;
+        this.helloWorld = helloWorld;
     }
-
 
 }
