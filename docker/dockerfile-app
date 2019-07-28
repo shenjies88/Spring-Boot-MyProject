@@ -1,6 +1,6 @@
 FROM openjdk:12
-RUN mkdir -p /app/build/libs
+RUN mkdir -p /app
 WORKDIR /app
-COPY ../spring-boot-myproject-service/target/*.jar /app/build/libs
+COPY ../spring-boot-myproject-service/target/*.jar /app/app.java
 EXPOSE 8080
-CMD ["java", "-jar", "build/libs/spring-boot-myproject.jar","--spring.profiles.active=docker"]
+CMD ["java", "-jar", "app.jar","--spring.profiles.active=docker"]
