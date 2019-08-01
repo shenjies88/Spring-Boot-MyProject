@@ -2,7 +2,7 @@ version: '3'
 services:
   mysql:
     image: mysql:5.7
-    container_name: mysql
+    container_name: compose-mysql
     ports:
       - '3306:3306'
     environment:
@@ -16,7 +16,7 @@ services:
 
   rabbit:
     image: rabbitmq:3-management
-    container_name: rabbit
+    container_name: compose-rabbit
     ports:
       - '5672:5672'
       - '15672:15672'
@@ -24,8 +24,8 @@ services:
       - compose-net
 
   spring-boot:
-    image: compose-spring-boot:v1
-    container_name: compose-spring-boot
+    image: spring-boot-image:v1
+    container_name: spring-boot-container
     build:
       context: .
       dockerfile: dockerfile-app
