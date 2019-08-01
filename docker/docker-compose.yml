@@ -27,7 +27,7 @@ services:
     image: spring-boot-image:v1
     container_name: spring-boot-container
     build:
-      context: .
+      context: ..
       dockerfile: dockerfile-app
     ports:
       - "8080:8080"

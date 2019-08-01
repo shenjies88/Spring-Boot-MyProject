@@ -1,6 +1,5 @@
 FROM openjdk:12
-RUN mkdir -p /app
 WORKDIR /app
-COPY ../spring-boot-myproject-service/target/*.jar /app/app.java
+COPY spring-boot-myproject-service/target/*.jar app.jar
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar","--spring.profiles.active=docker"]
