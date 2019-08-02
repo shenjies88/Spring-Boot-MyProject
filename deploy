@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+mvn clean package -DskipTests && docker build -f docker/dockerfile-app -t spring-boot-image:v1 . \
+&& docker run --name spring-boot-container -p 8080:8080 -d spring-boot-image:v1
