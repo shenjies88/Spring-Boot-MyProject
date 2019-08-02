@@ -12,3 +12,10 @@
 - Lombok
 - Swagger
 - Spring Cloud GateWay
+
+## docker运行
+
+```
+./deploy
+```
+
