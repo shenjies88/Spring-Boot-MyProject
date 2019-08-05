@@ -2,7 +2,7 @@
 功能需要去调注释，自行摸索
 ## JDK要求
 - JDK12
-## starter模块
+## Starter模块
 - 自动配置实践
 ## 所用框架
 - Spring
