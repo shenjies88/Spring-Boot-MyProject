@@ -1,10 +1,10 @@
-# My Practice
+# Spring Boot脚手架简单实践
 功能需要去调注释，自行摸索
-## Request
+## JDK要求
 - JDK12
-## starter
+## starter模块
 - 自动配置实践
-## Framework
+## 所用框架
 - Spring
 - Spring Boot
 - Mybatis
