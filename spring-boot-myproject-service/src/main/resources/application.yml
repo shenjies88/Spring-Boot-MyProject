@@ -7,6 +7,7 @@ spring:
     active: dev
 
 hello-world:
+  enabled: true
   name: 'Foo'
   age: 20
   sex: 'm'

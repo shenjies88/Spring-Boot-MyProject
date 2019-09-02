@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 @ConfigurationProperties(prefix = "hello-world")
 public class HelloWorldProperties {
-    private Boolean enabled = true;
+    private Boolean enabled;
     private String name;
     private Integer age;
     private String sex;

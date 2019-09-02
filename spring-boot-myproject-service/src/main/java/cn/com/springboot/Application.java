@@ -16,7 +16,7 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
 
-        if (helloWorld.getHelloWorldProperties() != null) {
+        if (helloWorld != null) {
             log.info("");
             log.info("自动配置成功");
             log.info("name {}", helloWorld.getHelloWorldProperties().getName());
