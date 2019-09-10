@@ -1,2 +1,2 @@
 #!/bin/sh
-docker stop spring-boot-container && docker rm spring-boot-container && docker image rm spring-boot-image:v1
+docker stop spring-boot-container && docker rm spring-boot-container
