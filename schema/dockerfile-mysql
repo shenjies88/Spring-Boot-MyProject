@@ -1,0 +1,16 @@
+FROM mysql:5.7
+
+#定义SQL文件
+ENV SCHEMA_SQL schema.sql
+
+#mysql.cnf
+ENV MYSQL_CNF mysql.cnf
+
+#定义会被容器自动执行的目录
+ENV AUTO_RUN_DIR /docker-entrypoint-initdb.d
+
+COPY ./$SCHEMA_SQL $AUTO_RUN_DIR/
+COPY ./$MYSQL_CNF /etc/mysql/mysql.conf.d/mysql.cnf
+
+
+

@@ -1,0 +1,2 @@
+docker build -t auto_run_mysql:1.0 -f dockerfile-mysql  . \
+&& docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306 -d auto_run_mysql:1.0
