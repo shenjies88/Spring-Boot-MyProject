@@ -3,5 +3,5 @@
 编译jar包放入docker文件夹 --->
 'docker-compose down' 停止并删除该compose镜像创造出来的容器 --->
 'docker-compose build' 重新构建镜像 --->
-'docker images|grep none|awk '{print $3 }'|xargs docker rmi' 删除none镜像 --->
+'docker images prune -f 删除none镜像 --->
 'docker-compose start' 启动服务
