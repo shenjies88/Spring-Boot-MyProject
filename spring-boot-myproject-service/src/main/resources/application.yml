@@ -5,6 +5,8 @@ spring:
     name: MyProject
   profiles:
     active: dev
+  main:
+    lazy-initialization: true
 
 hello-world:
   enabled: true

@@ -20,13 +20,13 @@
 
     <properties>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>12</java.version>
+        <java.version>13</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>12</maven.compiler.source>
-        <maven.compiler.target>12</maven.compiler.target>
-        <maven.compiler.compilerVersion>12</maven.compiler.compilerVersion>
-        <spring.boot.version>2.1.9.RELEASE</spring.boot.version>
-        <spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
+        <spring.boot.version>2.2.0.RELEASE</spring.boot.version>
+        <spring.cloud.version>Greenwich.SR3</spring.cloud.version>
     </properties>
 
     <dependencyManagement>
