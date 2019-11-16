@@ -18,6 +18,3 @@ jobs:
         java-version: 13
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Push GitHub Package
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$GH_TOKEN
-
