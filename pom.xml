@@ -114,6 +114,14 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub shenjies88 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/shenjies88/spring-boot-myproject</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
