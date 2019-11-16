@@ -87,7 +87,20 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.9</version>
             </dependency>
+            <!--JDK13-->
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>3.15.0-GA</version>
+            </dependency>
+            <!--JDK9-->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>2.3.1</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <dependencies>
