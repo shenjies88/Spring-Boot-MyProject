@@ -4,7 +4,7 @@ on:
     branches: 
       - master
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -14,10 +14,6 @@ jobs:
         java-version: 13
     - name: build with maven
       run: mvn -B package --file pom.xml
-    - name: deploy
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$ACCESS_TOKEN
 
 
 
