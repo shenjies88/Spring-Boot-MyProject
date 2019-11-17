@@ -16,10 +16,11 @@ jobs:
       run: mvn -B package --file pom.xml
   deploy-maven:
     needs: build
-      - name: deploy
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$ACCESS_TOKEN
+    steps:
+    - name: deploy
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$ACCESS_TOKEN
 
 
 
