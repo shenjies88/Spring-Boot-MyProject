@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy with Maven
-        run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=${{ repo-token }}
+        run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$repo-token
       - uses: actions/labeler@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
