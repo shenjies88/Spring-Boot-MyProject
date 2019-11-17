@@ -23,4 +23,4 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: Deploy with Maven
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=${{ repo-token }}
+      run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$GITHUB_TOKEN
