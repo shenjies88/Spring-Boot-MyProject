@@ -16,6 +16,7 @@ jobs:
       run: mvn -B package --file pom.xml
   deploy-maven:
     needs: build
+    runs-on: ubuntu-latest
     steps:
     - name: deploy
       env:
