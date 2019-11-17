@@ -6,10 +6,9 @@ on:
       - master
 
 jobs:
-  build:
-  
-    runs-on: ubuntu-latest
 
+  build:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 13
@@ -18,9 +17,13 @@ jobs:
         java-version: 13
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Get Token
+
+  deploy-maven:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy with Maven
+        run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=${{ repo-token }}
       uses: actions/labeler@v2
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Deploy with Maven
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/shenjies88 -Dtoken=$GITHUB_TOKEN
+
