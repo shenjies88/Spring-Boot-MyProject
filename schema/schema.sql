@@ -51,7 +51,7 @@ values ('1452200111', '足球', '摄影协会', '自动控制原理'),
        ('1452200113', '乒乓球', '书法协会', '大学英语'),
        ('1452200114', '羽毛球', '骑行协会', '大学物理');
 
-create table page_helper
+create table if not exists page_helper
 (
     id   int unsigned auto_increment
         primary key,
