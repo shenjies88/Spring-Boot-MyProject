@@ -7,7 +7,7 @@
     <groupId>com.springboot.myproject</groupId>
     <artifactId>spring-boot-myproject</artifactId>
     <packaging>pom</packaging>
-    <version>1.1</version>
+    <version>1.0</version>
 
     <name>spring-boot-myproject</name>
     <description>spirng boot</description>
@@ -21,11 +21,11 @@
     <properties>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>13</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
-        <spring.boot.version>2.2.1.RELEASE</spring.boot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
     </properties>
 

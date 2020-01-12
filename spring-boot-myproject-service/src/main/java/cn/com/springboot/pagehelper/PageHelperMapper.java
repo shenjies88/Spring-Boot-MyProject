@@ -1,7 +1,7 @@
 package cn.com.springboot.pagehelper;
 
+import cn.com.springboot.vo.PageVo;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,9 +12,5 @@ import java.util.List;
 @Mapper
 public interface PageHelperMapper {
 
-    List<PageHelperDo> getListFrom();
-
-    List<PageHelperDo> selectByPageNumSize(
-            @Param("pageNum") int pageNum,
-            @Param("pageSize") int pageSiz);
+    List<PageHelperDo> getListFrom(PageVo pageVo);
 }

@@ -2,7 +2,7 @@ const targetJar = 'spring-boot-myproject-service/target/spring-boot-myproject.ja
 
 module.exports = {
     apps: [{
-        name: 'SpringBoot',
+        name: 'my-springboot-project',
         script: 'java',
         args: [
             '-jar',

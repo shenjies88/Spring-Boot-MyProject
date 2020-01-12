@@ -6,11 +6,4 @@
         select id,name,age
         from page_helper
     </select>
-
-    <select id="selectByPageNumSize" resultType="cn.com.springboot.pagehelper.PageHelperDo">
-        select id,name,age
-        from page_helper
-    </select>
-
-
 </mapper>

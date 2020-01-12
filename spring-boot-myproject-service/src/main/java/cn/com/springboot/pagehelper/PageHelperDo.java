@@ -9,6 +9,8 @@ import lombok.Data;
 @Data
 public class PageHelperDo {
 
+    private Integer id;
+
     private String name;
 
     private Integer age;
