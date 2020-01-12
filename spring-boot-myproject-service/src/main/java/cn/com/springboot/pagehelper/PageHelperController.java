@@ -6,7 +6,9 @@ import cn.com.springboot.vo.PageVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,8 +25,8 @@ public class PageHelperController {
     private PageHelperMapper pageHelperMapper;
 
     @ApiOperation("实践")
-    @GetMapping
-    public HttpResult pagehelper() {
-        return HttpResult.success(PageUtils.paging(new PageVo(2, 10), pageHelperMapper::getListFrom));
+    @PostMapping
+    public HttpResult pagehelper(@RequestBody @Validated PageVo pageVo) {
+        return HttpResult.success(PageUtils.paging(pageVo, pageHelperMapper::getListFrom));
     }
 }
