@@ -12,8 +12,8 @@ import java.util.List;
 @Mapper
 public interface MybatisMapper {
 
-    List<MybatisEntity> listEntity(@Param("offset") Integer offset,
-                                   @Param("limit") Integer limit);
+    List<MybatisEntity> getListEntity(@Param("offset") Integer offset,
+                                      @Param("limit") Integer limit);
 
     @Select("SELECT" +
             "  s.student_code AS studentCode ," +

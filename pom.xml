@@ -63,12 +63,6 @@
                 <artifactId>swagger-bootstrap-ui</artifactId>
                 <version>1.9.3</version>
             </dependency>
-            <!--Mybatis-->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.0</version>
-            </dependency>
             <!--MySql-->
             <dependency>
                 <groupId>mysql</groupId>
@@ -98,6 +92,12 @@
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>
                 <version>2.3.1</version>
+            </dependency>
+            <!--pagehelper-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.13</version>
             </dependency>
         </dependencies>
 

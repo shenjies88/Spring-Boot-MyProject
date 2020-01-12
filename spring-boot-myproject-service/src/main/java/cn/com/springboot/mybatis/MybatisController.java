@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Api(tags = "Mybatis模板-需要去注释")
+@Api(tags = "需要去注释-Mybatis模板")
 //@AllArgsConstructor
 @RequestMapping("/mybatis")
 @RestController

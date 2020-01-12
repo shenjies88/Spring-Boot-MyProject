@@ -1,5 +1,6 @@
 package cn.com.springboot.jms;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.jms.Queue;
 
 @Slf4j
-//@AllArgsConstructor
+@AllArgsConstructor
 @Component
 public class JmsProducer {
 

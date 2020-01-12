@@ -8,7 +8,7 @@
 - Spring
 - Spring Boot
 - Mybatis
-- JPA
+- PageHelper
 - Lombok
 - Swagger
 - Spring Cloud GateWay
