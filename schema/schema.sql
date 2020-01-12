@@ -51,6 +51,45 @@ values ('1452200111', '足球', '摄影协会', '自动控制原理'),
        ('1452200113', '乒乓球', '书法协会', '大学英语'),
        ('1452200114', '羽毛球', '骑行协会', '大学物理');
 
+create table page_helper
+(
+    id   int unsigned auto_increment
+        primary key,
+    name varchar(32) default '' null comment '名字',
+    age  int         default 1  null comment '年龄'
+)
+    comment '分页插件实践';
+
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (1, '员工1', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (2, '员工2', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (3, '员工3', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (4, '员工4', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (5, '员工5', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (6, '员工6', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (7, '员工7', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (8, '员工8', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (9, '员工9', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (10, '员工10', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (11, '员工11', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (12, '员工12', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (13, '员工13', 1);
+INSERT INTO spring_boot.page_helper (id, name, age)
+VALUES (14, '员工14', 10);
+
+
 USE exercise;
 create table if not exists single_index
 (
@@ -89,6 +128,8 @@ values ('c1', 11, '2019-04-11', 'n1'),
        ('c2', 12, '2019-04-12', 'n2'),
        ('c3', 13, '2019-04-13', 'n3'),
        ('c4', 14, '2019-04-14', 'n4');
+
+
 
 
 
