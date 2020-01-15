@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author shenjies88
  * @since 2020/1/11-20:55
  */
-@Api(tags = "需要去掉注释-PageHelper")
+@Api(tags = "需要数据库-PageHelper")
 @RestController
 @RequestMapping("/pagehelper")
 public class PageHelperController {

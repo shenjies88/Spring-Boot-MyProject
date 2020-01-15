@@ -3,6 +3,7 @@ package cn.com.springboot.mybatis;
 import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Api(tags = "需要去注释-Mybatis模板")
-//@AllArgsConstructor
+@Api(tags = "需要数据库-Mybatis模板")
+@AllArgsConstructor
 @RequestMapping("/mybatis")
 @RestController
 public class MybatisController {

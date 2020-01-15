@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class RabbitReceiverA {
 
-    //    @RabbitHandler
+//    @RabbitHandler
     public void receiveMessage(String message) {
         log.info("ReceivedA <" + message + ">");
 

@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
-@SpringBootApplication(scanBasePackages = {"cn.com.springboot"})
+@SpringBootApplication
 public class Application {
 
     private static HelloWorld helloWorld;
@@ -26,7 +26,7 @@ public class Application {
 
     @Autowired
     public void setHelloWorld(HelloWorld helloWorld) {
-        this.helloWorld = helloWorld;
+        Application.helloWorld = helloWorld;
     }
 
 }

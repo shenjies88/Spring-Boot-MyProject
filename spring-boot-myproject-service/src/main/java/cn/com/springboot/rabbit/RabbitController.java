@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static cn.com.springboot.rabbit.RabbitConfig.TOPIC_EXCHANGE_NAME;
 
-@Api(tags = "需要去注释-Rabbit消息队列")
+@Api(tags = "需要RabbitMQ-Rabbit消息队列")
 @Slf4j
 //@AllArgsConstructor
 @RequestMapping("/rabbit")
