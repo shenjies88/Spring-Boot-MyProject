@@ -10,13 +10,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Objects;
 
-/**
- * swager配置
- */
 @EnableSwaggerBootstrapUI
 @EnableSwagger2
 @Configuration
-public class SwaggerConfiguration {
+public class SwaggerConfig {
 
     @Bean
     public Docket api() {
@@ -26,6 +23,4 @@ public class SwaggerConfiguration {
                 .paths(path -> !Objects.equals(path, "/error"))
                 .build();
     }
-
-
 }
