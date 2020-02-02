@@ -106,10 +106,10 @@ create table if not exists single_index
     comment '单索引练习' character set utf8mb4;
 
 INSERT INTO single_index (i1_char, i2_int, i3_date, no_index)
-values ('c1', 11, '2019-04-11', 'n1'),
-       ('c2', 12, '2019-04-12', 'n2'),
-       ('c3', 13, '2019-04-13', 'n3'),
-       ('c4', 14, '2019-04-14', 'n4');
+values ('caaaa51', 11, '2019-04-11', 'n1'),
+       ('cbbbb62', 12, '2019-04-12', 'n2'),
+       ('ccccc73', 13, '2019-04-13', 'n3'),
+       ('cdddd84', 14, '2019-04-14', 'n4');
 
 create table if not exists union_index
 (
