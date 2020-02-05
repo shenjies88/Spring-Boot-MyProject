@@ -25,7 +25,7 @@ public class Application {
     }
 
     @Autowired
-    public void setHelloWorld(HelloWorld helloWorld) {
+    public static void setHelloWorld(HelloWorld helloWorld) {
         Application.helloWorld = helloWorld;
     }
 
