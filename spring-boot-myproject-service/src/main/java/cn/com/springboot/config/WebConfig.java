@@ -13,17 +13,12 @@ import org.springframework.web.servlet.handler.MappedInterceptor;
  */
 @AllArgsConstructor
 @Configuration
-public class WebAppConfig implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
 
     private MyIntercept myIntercept;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        /**
-         * includes是拦截的路径
-         * exclude是不拦截的路径
-         * 利用正则表达式灵活处理
-         */
         String[] includes = new String[]{"/mybatis/**"};
         String[] exclude = new String[]{};
         var mappedInterceptor = new MappedInterceptor(includes, exclude, myIntercept);

@@ -21,9 +21,6 @@ import java.util.Arrays;
 @RestController
 public class ProxyController {
 
-    /**
-     * 还原请求头
-     */
     private static void addOriginHeaders(HttpServletRequest request, ProxyExchange<byte[]> proxy) {
         String[] keys = new String[]{
                 "Content-Type",
