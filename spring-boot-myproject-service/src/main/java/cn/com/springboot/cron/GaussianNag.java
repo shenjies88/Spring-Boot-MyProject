@@ -13,7 +13,6 @@ import java.util.concurrent.ThreadLocalRandom;
 @Component
 public class GaussianNag {
 
-
     @Scheduled(fixedDelay = 5000)
     public void nag() throws InterruptedException {
         var s = String.valueOf(ThreadLocalRandom.current().nextGaussian());
