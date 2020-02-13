@@ -10,7 +10,7 @@
     <version>1.0</version>
 
     <name>spring-boot-myproject</name>
-    <description>spirng boot</description>
+    <description>spring boot</description>
 
     <modules>
         <module>spring-boot-myproject-service</module>
@@ -25,7 +25,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.boot.version>2.2.2.RELEASE</spring.boot.version>
+        <spring.boot.version>2.2.4.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
     </properties>
 
@@ -67,13 +67,13 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.12</version>
+                <version>8.0.19</version>
             </dependency>
             <!--Lombok-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.10</version>
+                <version>1.18.12</version>
                 <scope>provided</scope>
             </dependency>
             <!--Aop-->
