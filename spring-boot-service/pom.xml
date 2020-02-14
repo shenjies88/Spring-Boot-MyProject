@@ -3,26 +3,25 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.springboot.myproject</groupId>
-        <artifactId>spring-boot-myproject</artifactId>
+        <groupId>com.shenjies88.practice</groupId>
+        <artifactId>spring-boot</artifactId>
         <version>1.0</version>
     </parent>
 
-
     <modelVersion>4.0.0</modelVersion>
 
-    <name>spring-boot-myproject-service</name>
-    <artifactId>spring-boot-myproject-service</artifactId>
+    <name>spring-boot-service</name>
+    <artifactId>spring-boot-service</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.springboot.myproject</groupId>
-            <artifactId>spring-boot-myproject-starter</artifactId>
+            <groupId>com.shenjies88.practice</groupId>
+            <artifactId>spring-boot-starter</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.springboot.myproject</groupId>
-            <artifactId>spring-boot-myproject-interface</artifactId>
+            <groupId>com.shenjies88.practice</groupId>
+            <artifactId>spring-boot-interface</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <!--Swagger-->

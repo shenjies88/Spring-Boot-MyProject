@@ -4,18 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.springboot.myproject</groupId>
-    <artifactId>spring-boot-myproject</artifactId>
+    <groupId>com.shenjies88.practice</groupId>
+    <artifactId>spring-boot</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
 
-    <name>spring-boot-myproject</name>
-    <description>spring boot</description>
+    <name>spring-boot</name>
+    <description>Spring Boot 实践</description>
 
     <modules>
-        <module>spring-boot-myproject-service</module>
-        <module>spring-boot-myproject-interface</module>
-        <module>spring-boot-myproject-starter</module>
+        <module>spring-boot-service</module>
+        <module>spring-boot-interface</module>
+        <module>spring-boot-starter</module>
     </modules>
 
     <properties>

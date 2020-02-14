@@ -8,5 +8,5 @@ import java.lang.annotation.*;
 @Documented
 public @interface LoggerManage {
 
-    public String description();
+    String description();
 }

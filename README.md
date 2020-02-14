@@ -1,6 +1,5 @@
 # Spring Boot脚手架简单实践
-功能需要去调注释，自行摸索
-## JDK要求
+## JDK
 - JDK13
 ## Starter模块
 - 自动配置实践
