@@ -2,7 +2,6 @@ package cn.com.springboot.common.aop;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -38,7 +37,7 @@ public class LoggerAdvice {
         }
         var param = new StringBuffer("传入参数[{}] ");
         for (Object obj : parames) {
-            param.append(ToStringBuilder.reflectionToString(obj)).append("  ");
+            param.append(obj).append("  ");
         }
         return param.toString();
     }
