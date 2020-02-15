@@ -10,6 +10,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = {Application.class})
 @AutoConfigureMockMvc
@@ -21,6 +23,7 @@ public class BootTest {
     @Test
     public void boot() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.request(HttpMethod.GET, "/boot"))
+                .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string("Boot"));
     }
