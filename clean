@@ -1,4 +1,0 @@
-#!/bin/sh
-docker stop spring-boot-container \
-&& docker rm spring-boot-container \
-&& docker image prune -f

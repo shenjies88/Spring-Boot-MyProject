@@ -1,6 +1,0 @@
-发布脚本思路
-
-'docker-compose down' 停止并删除该compose镜像创造出来的容器 --->
-'docker-compose build' 重新构建镜像 --->
-'docker images prune -f 删除none镜像 --->
-'docker-compose start' 启动服务
