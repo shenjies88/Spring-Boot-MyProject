@@ -1,9 +1,14 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_boot?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2b8
+    url: jdbc:h2:mem:spring_boot;DATABASE_TO_UPPER=false;MODE=MYSQL;
+    platform: h2
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
     username: root
     password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  h2:
+    console:
+      enabled: true
   rabbitmq:
     host: localhost
     port: 5672

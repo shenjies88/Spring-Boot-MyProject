@@ -5,6 +5,8 @@ import cn.com.springboot.utils.PageUtils;
 import cn.com.springboot.vo.PageVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,12 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @author shenjies88
  * @since 2020/1/11-20:55
  */
-@Api(tags = "需要数据库-PageHelper")
+@Slf4j
+@Api(tags = "PageHelper")
 @RestController
 @RequestMapping("/pagehelper")
 public class PageHelperController {
 
-    //@Autowired
+    @Autowired
     private PageHelperMapper pageHelperMapper;
 
     @ApiOperation("实践")

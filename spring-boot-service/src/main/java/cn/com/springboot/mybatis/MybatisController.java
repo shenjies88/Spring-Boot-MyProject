@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Api(tags = "需要数据库-Mybatis模板")
+@Api(tags = "Mybatis模板")
 @AllArgsConstructor
 @RequestMapping("/mybatis")
 @RestController
