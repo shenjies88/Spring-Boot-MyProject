@@ -9,6 +9,7 @@
 - Mybatis
 - PageHelper
 - Lombok
+- H2
 - Swagger
 - Spring Cloud GateWay
 
