@@ -1,6 +1,7 @@
-package cn.com.springboot.pagehelper;
+package cn.com.springboot.controller;
 
 import cn.com.springboot.HttpResult;
+import cn.com.springboot.mapper.PageHelperMapper;
 import cn.com.springboot.utils.PageUtils;
 import cn.com.springboot.vo.PageVo;
 import io.swagger.annotations.Api;
@@ -29,6 +30,6 @@ public class PageHelperController {
     @ApiOperation("实践")
     @PostMapping
     public HttpResult pagehelper(@RequestBody @Validated PageVo pageVo) {
-        return HttpResult.success(PageUtils.paging(pageVo, pageHelperMapper::getListFrom));
+        return HttpResult.success(PageUtils.paging(pageVo, pageHelperMapper::getList));
     }
 }

@@ -1,6 +1,8 @@
-package cn.com.springboot.mybatis;
+package cn.com.springboot.controller;
 
 import cn.com.springboot.HttpResult;
+import cn.com.springboot.entity.MybatisDo;
+import cn.com.springboot.service.MybatisService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Api(tags = "Mybatis模板")
+@Api(tags = "Mybatis")
 @AllArgsConstructor
 @RequestMapping("/mybatis")
 @RestController
@@ -22,8 +24,8 @@ public class MybatisController {
     @ApiOperation("返回列表")
     @GetMapping("/list")
     public HttpResult list() {
-        List<MybatisEntity> mybatisEntityList = mybatisService.listEntity();
-        return HttpResult.success(mybatisEntityList);
+        List<MybatisDo> mybatisDoList = mybatisService.listEntity();
+        return HttpResult.success(mybatisDoList);
     }
 
     @ApiOperation("返回对象")

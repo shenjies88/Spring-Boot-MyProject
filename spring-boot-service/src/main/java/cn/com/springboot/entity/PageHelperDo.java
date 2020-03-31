@@ -1,4 +1,4 @@
-package cn.com.springboot.pagehelper;
+package cn.com.springboot.entity;
 
 import lombok.Data;
 

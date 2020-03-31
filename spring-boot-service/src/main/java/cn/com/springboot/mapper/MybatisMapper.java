@@ -1,6 +1,6 @@
-package cn.com.springboot.mybatis;
+package cn.com.springboot.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
+import cn.com.springboot.entity.MybatisDo;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -9,11 +9,10 @@ import java.util.List;
 /**
  * 两种实现
  */
-@Mapper
 public interface MybatisMapper {
 
-    List<MybatisEntity> getListEntity(@Param("offset") Integer offset,
-                                      @Param("limit") Integer limit);
+    List<MybatisDo> getPage(@Param("offset") Integer offset,
+                            @Param("limit") Integer limit);
 
     @Select("SELECT" +
             "  s.student_code AS studentCode ," +
@@ -25,5 +24,5 @@ public interface MybatisMapper {
             "  a.course AS course" +
             "  FROM student s LEFT JOIN activity a ON s.student_code = a.activity_student_code" +
             "  WHERE s.student_code = #{code}")
-    MybatisEntity queryByCode(@Param("code") String code);
+    MybatisDo getByCode(@Param("code") String code);
 }

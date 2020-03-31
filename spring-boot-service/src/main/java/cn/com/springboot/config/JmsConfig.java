@@ -1,4 +1,4 @@
-package cn.com.springboot.jms;
+package cn.com.springboot.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.context.annotation.Bean;

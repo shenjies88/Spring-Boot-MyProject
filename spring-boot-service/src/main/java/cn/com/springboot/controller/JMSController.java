@@ -1,6 +1,7 @@
-package cn.com.springboot.jms;
+package cn.com.springboot.controller;
 
 import cn.com.springboot.HttpResult;
+import cn.com.springboot.jms.JmsProducer;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;

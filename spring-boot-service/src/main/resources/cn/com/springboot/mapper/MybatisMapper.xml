@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.com.springboot.mybatis.MybatisMapper">
+<mapper namespace="cn.com.springboot.mapper.MybatisMapper">
 
-    <select id="getListEntity" resultType="cn.com.springboot.mybatis.MybatisEntity">
+    <select id="getPage" resultType="cn.com.springboot.entity.MybatisDo">
         SELECT
-            s.student_code         AS studentCode,
-            s.name                 AS name,
-            s.age                  AS age,
-            s.sex                  AS sex,
-            a.sports               AS sports,
-            a.student_organization AS studentOrganization,
-            a.course               AS course
+            s.student_code         ,
+            s.name                 ,
+            s.age                  ,
+            s.sex                  ,
+            a.sports               ,
+            a.student_organization ,
+            a.course
         FROM student s LEFT JOIN activity a ON s.student_code = a.activity_student_code
-        limit #{limit,jdbcType=INTEGER}
-        offset #{offset,jdbcType=INTEGER}
+        limit #{limit}
+        offset #{offset}
     </select>
 
 </mapper>

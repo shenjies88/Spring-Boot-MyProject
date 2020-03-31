@@ -1,4 +1,4 @@
-package cn.com.springboot.mybatis;
+package cn.com.springboot.entity;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
  * 连表
  */
 @Data
-public class MybatisEntity {
+public class MybatisDo {
 
     /**
      * 学号，唯一标识

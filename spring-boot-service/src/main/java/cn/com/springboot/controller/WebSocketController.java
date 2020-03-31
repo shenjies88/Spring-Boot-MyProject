@@ -1,5 +1,7 @@
-package cn.com.springboot.websocket;
+package cn.com.springboot.controller;
 
+import cn.com.springboot.websocket.WSReceiverMessage;
+import cn.com.springboot.websocket.WSReturnMessage;
 import io.swagger.annotations.Api;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -8,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.util.HtmlUtils;
 
-@Api(tags = "WebSocket模板")
+@Api(tags = "WebSocket")
 @RequestMapping("/websocket")
 @Controller
 public class WebSocketController {
