@@ -1,21 +1,23 @@
 package cn.com.springboot.cron;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Date;
 
 /**
  * 定时任务
  */
 @Slf4j
-@Component
+@Configuration
+@EnableScheduling
 public class GaussianNag {
 
     @Scheduled(fixedDelay = 5000)
     public void nag() throws InterruptedException {
-        var s = String.valueOf(ThreadLocalRandom.current().nextGaussian());
+        var s = String.valueOf(new Date());
         log.info(s);
         Thread.sleep(1000);
     }

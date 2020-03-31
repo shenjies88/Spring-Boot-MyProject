@@ -70,12 +70,6 @@
                 <version>1.18.12</version>
                 <scope>provided</scope>
             </dependency>
-            <!--JDK13-->
-            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>3.26.0-GA</version>
-            </dependency>
             <!--JDK9-->
             <dependency>
                 <groupId>javax.xml.bind</groupId>
@@ -98,10 +92,6 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.javassist</groupId>
-            <artifactId>javassist</artifactId>
-        </dependency>
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
