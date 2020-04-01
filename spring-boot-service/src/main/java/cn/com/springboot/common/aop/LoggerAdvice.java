@@ -7,13 +7,15 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 
 @Slf4j
 @Aspect
-@Service
+@Component
 public class LoggerAdvice {
+
+    private static final int PARAM_LENGTH = 1024;
 
 
     @Before("within(cn.com.springboot..*) && @annotation(loggerManage)")
@@ -31,8 +33,8 @@ public class LoggerAdvice {
         log.error("执行 " + loggerManage.description() + " 异常", ex);
     }
 
-    private String parseParames(Object[] parames) {
-        if (null == parames || parames.length <= 0 || parames.length > 1024) {
+    private String parseParams(Object[] parames) {
+        if (null == parames || parames.length <= 0 || parames.length > PARAM_LENGTH) {
             return "无参数";
         }
         var param = new StringBuffer("传入参数[{}] ");

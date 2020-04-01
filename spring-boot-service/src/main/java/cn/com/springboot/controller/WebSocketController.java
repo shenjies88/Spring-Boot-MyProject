@@ -18,12 +18,12 @@ public class WebSocketController {
     @MessageMapping("/hello")
     @SendTo("/topic/greetings")
     public WSReturnMessage greeting(WSReceiverMessage message) throws Exception {
-        Thread.sleep(1000); // simulated delay
+        Thread.sleep(1000);
         return new WSReturnMessage("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
     }
 
     @GetMapping("/ws")
-    public String webScoket() {
+    public String webSocket() {
         return "ws";
     }
 }

@@ -18,7 +18,7 @@ public class BootController {
 
     @ApiOperation("Boot")
     @GetMapping
-    public String Boot() {
+    public String boot() {
         return "boot";
     }
 }
