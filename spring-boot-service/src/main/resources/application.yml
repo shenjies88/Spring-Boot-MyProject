@@ -61,7 +61,7 @@ logging:
     org.springframework.jdbc.core.JdbcTemplate: debug
     cn.com.springboot: debug
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%-5level)  %clr(${PID:- }){magenta} --- [%t] %clr(%logger.%method:%line){cyan}  %m%n"
+    console: "%date   %clr(%-5level)  %clr(${PID:- }){magenta} --- [%t]   %clr(%logger.%method:%line){cyan}   %m%n"
   file:
     name: logs/service.log
     path: logs/
