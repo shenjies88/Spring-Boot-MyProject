@@ -14,11 +14,11 @@ import java.util.function.Function;
  */
 public class PageUtils {
 
-    public static <T extends PageVo, R> PageResultVo paging(T requestParm, Function<T, List<R>> function) {
-        Integer pageNum = requestParm.getPageNum();
-        Integer pageSize = requestParm.getPageSize();
+    public static <T extends PageVo, R> PageResultVo paging(T requestParam, Function<T, List<R>> function) {
+        Integer pageNum = requestParam.getPageNum();
+        Integer pageSize = requestParam.getPageSize();
         Page<R> page = PageHelper.startPage(pageNum, pageSize);
-        function.apply(requestParm);
+        function.apply(requestParam);
         return PageResultVo.format(page.getResult(), page.getTotal(), pageNum, pageSize);
     }
 }
