@@ -19,8 +19,9 @@
     </modules>
 
     <properties>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <encode>UTF-8</encode>
+        <project.reporting.outputEncoding>${encode}</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>${encode}</project.build.sourceEncoding>
         <java.version>13</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
