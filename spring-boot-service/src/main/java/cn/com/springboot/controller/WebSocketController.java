@@ -1,6 +1,5 @@
 package cn.com.springboot.controller;
 
-import cn.com.springboot.HttpResult;
 import cn.com.springboot.websocket.WsReceiverMessage;
 import cn.com.springboot.websocket.WsReturnMessage;
 import io.swagger.annotations.Api;
@@ -27,7 +26,7 @@ public class WebSocketController {
     }
 
     @GetMapping("/ws")
-    public HttpResult<String> webSocket() {
-        return HttpResult.success("ws");
+    public String webSocket() {
+        return "ws";
     }
 }
