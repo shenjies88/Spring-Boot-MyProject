@@ -20,7 +20,7 @@ public class JMSController {
 
     @ApiOperation("JMS消息")
     @PostMapping("/send")
-    public HttpResult jmsMessage(@RequestParam(name = "websocket", required = false) String message) {
+    public HttpResult<String> jmsMessage(@RequestParam(name = "websocket", required = false) String message) {
         var msg = message;
         if (msg == null) {
             msg = "默认消息";

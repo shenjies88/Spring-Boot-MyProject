@@ -1,5 +1,6 @@
 package cn.com.springboot.controller;
 
+import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class BootController {
 
     @ApiOperation("Boot")
     @GetMapping
-    public String boot() {
-        return "boot";
+    public HttpResult<String> boot() {
+        return HttpResult.success("boot");
     }
 }

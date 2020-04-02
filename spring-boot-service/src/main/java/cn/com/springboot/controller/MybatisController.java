@@ -23,14 +23,14 @@ public class MybatisController {
 
     @ApiOperation("返回列表")
     @GetMapping("/list")
-    public HttpResult list() {
+    public HttpResult<List<MybatisDo>> list() {
         List<MybatisDo> mybatisDoList = mybatisService.listEntity();
         return HttpResult.success(mybatisDoList);
     }
 
     @ApiOperation("返回对象")
     @GetMapping("/query")
-    public HttpResult query(@RequestParam(name = "code") String code) {
+    public HttpResult<MybatisDo> query(@RequestParam(name = "code") String code) {
         var mybatisEntity = mybatisService.queryByCode(code);
         return HttpResult.success(mybatisEntity);
     }

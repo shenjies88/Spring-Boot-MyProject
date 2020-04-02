@@ -31,7 +31,7 @@ public class ProxyController {
 
     @ApiOperation("我是接受者")
     @GetMapping("/proxy/receive")
-    public HttpResult hahaha() {
+    public HttpResult<String> hahaha() {
         return HttpResult.success("收到代理");
     }
 
