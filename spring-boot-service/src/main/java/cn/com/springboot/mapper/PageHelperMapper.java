@@ -11,5 +11,11 @@ import java.util.List;
  */
 public interface PageHelperMapper {
 
+    /**
+     * 获取实体分页
+     *
+     * @param pageVo 分页请求
+     * @return 实体列表
+     */
     List<PageHelperDo> getList(PageVo pageVo);
 }

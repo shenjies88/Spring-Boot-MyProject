@@ -3,6 +3,9 @@ package cn.com.springboot.jms;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * @author shenjies88
+ */
 @Data
 @AllArgsConstructor
 public class JmsEntity {

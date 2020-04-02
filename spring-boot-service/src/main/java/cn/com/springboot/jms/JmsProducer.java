@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 
 import javax.jms.Queue;
 
+/**
+ * @author shenjies88
+ */
 @Slf4j
 @AllArgsConstructor
 @Component

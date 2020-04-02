@@ -3,9 +3,7 @@ package cn.com.springboot.entity;
 import lombok.Data;
 
 /**
- * mybatis的实体类
- * <p>
- * 连表
+ * @author shenjies88
  */
 @Data
 public class MybatisDo {

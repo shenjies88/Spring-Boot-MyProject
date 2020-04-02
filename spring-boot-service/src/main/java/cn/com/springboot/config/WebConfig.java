@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.handler.MappedInterceptor;
 
 /**
- * Web配置
+ * @author shenjies88
  */
 @AllArgsConstructor
 @Configuration

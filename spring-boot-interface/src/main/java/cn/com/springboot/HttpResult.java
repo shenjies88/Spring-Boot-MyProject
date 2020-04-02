@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 返回的Http数据结构
+ * @author shenjies88
  */
 @Data
 @AllArgsConstructor

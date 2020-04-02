@@ -7,6 +7,9 @@ import org.springframework.jms.annotation.EnableJms;
 
 import javax.jms.Queue;
 
+/**
+ * @author shenjies88
+ */
 @EnableJms
 @Configuration
 public class JmsConfig {

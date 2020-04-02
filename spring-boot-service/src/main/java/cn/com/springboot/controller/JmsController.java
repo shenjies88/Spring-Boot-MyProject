@@ -10,11 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author shenjies88
+ */
 @Api(tags = "JMS消息队列")
 @AllArgsConstructor
 @RequestMapping("/jms")
 @RestController
-public class JMSController {
+public class JmsController {
 
     private JmsProducer jmsProducer;
 

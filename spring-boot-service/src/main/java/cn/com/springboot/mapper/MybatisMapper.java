@@ -8,12 +8,25 @@ import java.util.List;
 
 /**
  * 两种实现
+ *
+ * @author shenjies88
  */
 public interface MybatisMapper {
 
+    /**
+     * 获取实体分页 xml实现
+     * @param limit 限制
+     * @param offset 跳过
+     * @return 实体列表
+     */
     List<MybatisDo> getPage(@Param("offset") Integer offset,
                             @Param("limit") Integer limit);
 
+    /**
+     * 连表查询 注解实现
+     * @param code 唯一标识
+     * @return 实体
+     */
     @Select("SELECT" +
             "  s.student_code AS studentCode ," +
             "  s.name AS name ," +

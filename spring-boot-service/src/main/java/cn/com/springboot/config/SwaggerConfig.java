@@ -10,6 +10,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Objects;
 
+/**
+ * @author shenjies88
+ */
 @EnableSwaggerBootstrapUI
 @EnableSwagger2
 @Configuration
