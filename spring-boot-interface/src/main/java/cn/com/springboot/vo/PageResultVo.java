@@ -9,6 +9,7 @@ import java.util.List;
  * @author shenjies88
  * @since 2020/1/12-12:38
  */
+@SuppressWarnings("unchecked")
 @Data
 @AllArgsConstructor
 public class PageResultVo<T> {
@@ -22,7 +23,7 @@ public class PageResultVo<T> {
     private List<T> list;
 
 
-    public static <T> PageResultVo format(List<T> list, Long count, Integer pageNum, Integer pageSize) {
+    public static <T> PageResultVo<T> format(List<T> list, Long count, Integer pageNum, Integer pageSize) {
         return new PageResultVo(count, pageNum, pageSize, list);
     }
 }

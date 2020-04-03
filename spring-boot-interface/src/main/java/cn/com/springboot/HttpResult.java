@@ -36,7 +36,7 @@ public class HttpResult<T> {
         return new HttpResult<>(0, true, "success", null);
     }
 
-    public static <U> HttpResult success(U data) {
+    public static <U> HttpResult<U> success(U data) {
         return new HttpResult<>(0, true, "success", data);
     }
 

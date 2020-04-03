@@ -14,7 +14,7 @@ import java.util.function.Function;
  */
 public class PageUtils {
 
-    public static <T extends PageVo, R> PageResultVo paging(T requestParam, Function<T, List<R>> function) {
+    public static <T extends PageVo, R> PageResultVo<R> paging(T requestParam, Function<T, List<R>> function) {
         Integer pageNum = requestParam.getPageNum();
         Integer pageSize = requestParam.getPageSize();
         Page<R> page = PageHelper.startPage(pageNum, pageSize);
