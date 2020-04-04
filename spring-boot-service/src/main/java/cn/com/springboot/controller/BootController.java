@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 例子
+ * 例子boot
+ *
  * @author shenjies88
  * @since 2019-07-26-17:34
  */
