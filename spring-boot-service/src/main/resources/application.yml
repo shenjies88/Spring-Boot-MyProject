@@ -60,4 +60,4 @@ logging:
     root: info
     cn.com.springboot: debug
   pattern:
-    console: "%d %clr(%-5p) %clr(${PID:-}){magenta} --- [%t] %clr(%c{10}.%M:%L){cyan} %m%n"
+    console: "%d %clr(%-5p) %clr(${PID:-}){magenta} --- [%t] %clr(%c{10}.%M){cyan} \\(%file:%line\\) %m%n"
