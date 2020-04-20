@@ -25,6 +25,6 @@ public class BootTest {
         mockMvc.perform(MockMvcRequestBuilders.request(HttpMethod.GET, "/boot"))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("Boot"));
+                .andExpect(MockMvcResultMatchers.content().string("{\"code\":0,\"status\":true,\"message\":\"success\",\"data\":\"boot\"}"));
     }
 }
