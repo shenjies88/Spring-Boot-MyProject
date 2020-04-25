@@ -32,7 +32,7 @@ public class ExceptionController {
         if (message == null) {
             message = e.getClass().getSimpleName();
         }
-        log.warn(message, e);
+        log.error(message, e);
         return HttpResult.fail(message);
     }
 }

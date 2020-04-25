@@ -22,7 +22,7 @@
         <encode>UTF-8</encode>
         <project.reporting.outputEncoding>${encode}</project.reporting.outputEncoding>
         <project.build.sourceEncoding>${encode}</project.build.sourceEncoding>
-        <java.version>13</java.version>
+        <java.version>14</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
@@ -88,6 +88,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>1.1.17</version>
+            </dependency>
+            <!--JSON转换-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.68</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
