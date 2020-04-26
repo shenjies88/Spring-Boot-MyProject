@@ -35,6 +35,9 @@ spring:
   h2:
     console:
       enabled: true
+  http:
+    encoding:
+      force: true
 
 # 自动配置
 hello-world:

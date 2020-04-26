@@ -22,6 +22,6 @@ public class BootController {
     @ApiOperation("Boot")
     @GetMapping
     public HttpResult<String> boot() {
-        throw new RuntimeException("1");
+        return HttpResult.success("boot");
     }
 }
