@@ -49,7 +49,6 @@ public class ApiAspect {
             message += "无输入参数";
         }
         log.info(message);
-
     }
 
     @AfterReturning(value = "pointcut()", returning = "returnObj")
@@ -70,17 +69,13 @@ public class ApiAspect {
     @Around(value = "pointcut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         Long begin = System.currentTimeMillis();
-        StringBuilder message = new StringBuilder();
         Object result = null;
         try {
             result = proceedingJoinPoint.proceed();
-        } catch (Exception e) {
-            log.error(" \n接口异常：" + message + e.getMessage(), e);
-            throw e;
+        } finally {
+            Long end = System.currentTimeMillis();
+            log.info(" 执行时间: [" + (end - begin) + "]ms");
         }
-        Long end = System.currentTimeMillis();
-        message.append(" 执行时间: [").append(end - begin).append("]ms");
-        log.info(message.toString());
         return result;
     }
 }
