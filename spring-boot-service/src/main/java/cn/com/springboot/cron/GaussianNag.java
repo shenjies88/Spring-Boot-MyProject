@@ -19,6 +19,7 @@ public class GaussianNag {
     public void nag() throws InterruptedException {
         var s = String.valueOf(new Date());
         log.info(s);
+
         Thread.sleep(1000);
     }
 }

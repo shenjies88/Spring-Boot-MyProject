@@ -38,6 +38,14 @@ spring:
   http:
     encoding:
       force: true
+#  redis:
+#    host: 127.0.0.1
+#    database: 0
+#    port: 6379
+#    lettuce:
+#      pool:
+#        max-active: 50
+#        min-idle: 5
 
 # 自动配置
 hello-world:
