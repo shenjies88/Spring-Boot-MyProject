@@ -1,6 +1,6 @@
 # Spring Boot脚手架简单实践
 ## JDK
-- JDK13
+- JDK14
 ## Starter模块
 - 自动配置实践
 ## 所用框架
