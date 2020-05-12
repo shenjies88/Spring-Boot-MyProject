@@ -81,3 +81,15 @@ INSERT INTO page_helper (id, name, age)
 VALUES (13, '员工13', 1);
 INSERT INTO page_helper (id, name, age)
 VALUES (14, '员工14', 10);
+
+create table goods
+(
+    id   int unsigned auto_increment comment '主键' primary key,
+    name varchar(20)  not null comment '商品名',
+    num  int unsigned not null comment '商品数量'
+) comment '商品秒杀表';
+
+insert into goods (name, num)
+values ('牙刷', 10),
+       ('牙膏', 30),
+       ('玩具', 50)
