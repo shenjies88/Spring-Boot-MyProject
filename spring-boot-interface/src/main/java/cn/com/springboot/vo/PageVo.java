@@ -3,6 +3,7 @@ package cn.com.springboot.vo;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Min;
 
@@ -11,12 +12,9 @@ import javax.validation.constraints.Min;
  * @since 2020/1/12-12:38
  */
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 public class PageVo {
-
-    PageVo() {
-
-    }
 
     @Min(1)
     @ApiModelProperty(example = "1")
