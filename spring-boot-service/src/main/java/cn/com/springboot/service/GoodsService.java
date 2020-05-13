@@ -34,7 +34,7 @@ public class GoodsService {
     }
 
     /**
-     * 排他锁秒杀
+     * 悲观锁秒杀
      */
     @Transactional(rollbackFor = Exception.class)
     public Integer pessimisticSpikeGoods(Integer id, String userName) {
