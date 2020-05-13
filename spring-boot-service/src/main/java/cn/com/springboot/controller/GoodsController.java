@@ -25,8 +25,17 @@ public class GoodsController {
 
     @ApiOperation("乐观锁秒杀")
     @GetMapping("/optimism-spike-goods")
-    public HttpResult<Integer> optimismSpikeGoods(@ApiParam("商品名") @RequestParam String name) {
-        Integer total = goodsService.optimismSpikeGoods(name);
+    public HttpResult<Integer> optimismSpikeGoods(@ApiParam("商品名") @RequestParam String name,
+                                                  @ApiParam("用户名") @RequestParam String userName) {
+        Integer total = goodsService.optimismSpikeGoods(name, userName);
+        return HttpResult.success(total);
+    }
+
+    @ApiOperation("悲观锁秒杀")
+    @GetMapping("/pessimistic-spike-goods")
+    public HttpResult<Integer> pessimisticSpikeGoods(@ApiParam("商品id") @RequestParam Integer id,
+                                                     @ApiParam("用户名") @RequestParam String userName) {
+        Integer total = goodsService.pessimisticSpikeGoods(id, userName);
         return HttpResult.success(total);
     }
 }
