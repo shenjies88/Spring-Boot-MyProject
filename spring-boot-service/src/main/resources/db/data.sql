@@ -90,6 +90,4 @@ create table goods
 ) comment '商品秒杀表';
 
 insert into goods (name, num)
-values ('牙刷', 10),
-       ('牙膏', 30),
-       ('玩具', 50)
+values ('牙刷', 10);
