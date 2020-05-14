@@ -20,9 +20,9 @@ public class SwaggerConfig {
 
     @Bean
     public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
+        return new Docket(DocumentationType.SPRING_WEB)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("cn.com.springboot"))
                 .paths(path -> !Objects.equals(path, "/error"))
                 .build();
     }
