@@ -38,16 +38,16 @@ spring:
   http:
     encoding:
       force: true
-  redis:
-    host: 127.0.0.1
-    database: 0
-    port: 6379
-    lettuce:
-      pool:
-        max-active: 50
-        min-idle: 5
-    redisson:
-      config: classpath:redisson.yaml
+#  redis:
+#    host: 127.0.0.1
+#    database: 0
+#    port: 6379
+#    lettuce:
+#      pool:
+#        max-active: 50
+#        min-idle: 5
+#    redisson:
+#      config: classpath:redisson.yaml
 
 # 自动配置
 hello-world:
@@ -74,3 +74,6 @@ logging:
     cn.com.springboot: debug
   pattern:
     console: "%d %clr(%-5p) %clr(${PID:-}){magenta} --- [%t] %clr(%c{10}.%M){cyan} \\(%file:%line\\) %m%n"
+
+swagger:
+  production: true

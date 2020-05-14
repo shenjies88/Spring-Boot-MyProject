@@ -4,7 +4,6 @@ import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RFuture;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +31,8 @@ public class RedisController {
     public HttpResult<String> lock() {
         RLock lock = redisson.getLock("myLock");
         try {
-            RFuture<Boolean> lockFuture = lock.tryLockAsync(10, 3, TimeUnit.SECONDS);
-            lockFuture.whenComplete((res, exception) -> {
-                log.info(res ? "抢到锁了" : "没抢到锁");
-            });
-            log.info("同步输出一下");
+            boolean res = lock.tryLock(10, 4, TimeUnit.SECONDS);
+            return res ? HttpResult.success("抢到锁了") : HttpResult.fail("没抢到锁");
         } catch (Exception e) {
         }
         return HttpResult.success("Lock");
