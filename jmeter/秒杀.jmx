@@ -59,26 +59,7 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="用户参数" enabled="false">
-            <collectionProp name="UserParameters.names">
-              <stringProp name="-266666762">userName</stringProp>
-            </collectionProp>
-            <collectionProp name="UserParameters.thread_values">
-              <collectionProp name="70318986">
-                <stringProp name="774889">张三</stringProp>
-              </collectionProp>
-              <collectionProp name="1024662334">
-                <stringProp name="842061">李四</stringProp>
-              </collectionProp>
-              <collectionProp name="2055377131">
-                <stringProp name="937065">王五</stringProp>
-              </collectionProp>
-            </collectionProp>
-            <boolProp name="UserParameters.per_iteration">false</boolProp>
-          </UserParameters>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="结果树" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -202,7 +183,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV设置" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">utf-8</stringProp>
-          <stringProp name="filename">/Users/shenjies88/Desktop/demo/jmeter/乐观锁秒杀CSV.txt</stringProp>
+          <stringProp name="filename">/Users/shenjies88/Desktop/demo/spring-boot-practice/jmeter/秒杀CSV.txt</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -259,26 +240,7 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
-        <hashTree>
-          <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="用户参数" enabled="false">
-            <collectionProp name="UserParameters.names">
-              <stringProp name="-266666762">userName</stringProp>
-            </collectionProp>
-            <collectionProp name="UserParameters.thread_values">
-              <collectionProp name="70318986">
-                <stringProp name="774889">张三</stringProp>
-              </collectionProp>
-              <collectionProp name="1024662334">
-                <stringProp name="842061">李四</stringProp>
-              </collectionProp>
-              <collectionProp name="2055377131">
-                <stringProp name="937065">王五</stringProp>
-              </collectionProp>
-            </collectionProp>
-            <boolProp name="UserParameters.per_iteration">false</boolProp>
-          </UserParameters>
-          <hashTree/>
-        </hashTree>
+        <hashTree/>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="结果树" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -402,7 +364,7 @@
         <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV设置" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding">utf-8</stringProp>
-          <stringProp name="filename">/Users/shenjies88/Desktop/demo/jmeter/秒杀CSV.txt</stringProp>
+          <stringProp name="filename">/Users/shenjies88/Desktop/demo/spring-boot-practice/jmeter/秒杀CSV.txt</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
