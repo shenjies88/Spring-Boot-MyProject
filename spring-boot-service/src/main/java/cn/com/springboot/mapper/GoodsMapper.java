@@ -28,7 +28,8 @@ public interface GoodsMapper {
     /**
      * 乐观锁秒杀
      *
-     * @param id 商品id
+     * @param id  商品id
+     * @param num 当前商品数量
      * @return 更新条数
      */
     int optimismSpikeGoods(@Param("id") Integer id, @Param("num") Integer num);
