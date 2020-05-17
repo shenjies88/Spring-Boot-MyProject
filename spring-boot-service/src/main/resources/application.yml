@@ -42,7 +42,7 @@ spring:
 #    host: 127.0.0.1
 #    database: 0
 #    port: 6379
-#    timeout: 3000
+#    timeout: 5000ms
 #    lettuce:
 #      pool:
 #        max-active: 50

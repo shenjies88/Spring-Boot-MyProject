@@ -15,7 +15,8 @@ public interface MybatisMapper {
 
     /**
      * 获取实体分页 xml实现
-     * @param limit 限制
+     *
+     * @param limit  限制
      * @param offset 跳过
      * @return 实体列表
      */
@@ -24,6 +25,7 @@ public interface MybatisMapper {
 
     /**
      * 连表查询 注解实现
+     *
      * @param code 唯一标识
      * @return 实体
      */

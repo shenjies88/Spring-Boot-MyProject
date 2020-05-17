@@ -21,7 +21,7 @@ values ('1452200111', '张三', '18', '男'),
        ('1452200113', '王五', '20', '女'),
        ('1452200114', '韩梅梅', '21', '女');
 
-create table  activity
+create table activity
 (
     id                    int unsigned auto_increment
         comment '主键'
@@ -44,7 +44,7 @@ values ('1452200111', '足球', '摄影协会', '自动控制原理'),
        ('1452200113', '乒乓球', '书法协会', '大学英语'),
        ('1452200114', '羽毛球', '骑行协会', '大学物理');
 
-create table  page_helper
+create table page_helper
 (
     id   int unsigned auto_increment
         primary key,
