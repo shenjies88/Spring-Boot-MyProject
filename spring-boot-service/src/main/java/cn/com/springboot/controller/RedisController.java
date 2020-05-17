@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -32,7 +32,7 @@ public class RedisController {
     private RedissonClient redisson;
 
     @Autowired
-    private RedisTemplate redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
     @ApiOperation("Redis Lock")
     @GetMapping("/lock")
@@ -53,7 +53,8 @@ public class RedisController {
         script.setResultType(Long.class);
         script.setScriptSource(new ResourceScriptSource(new
                 ClassPathResource("limite.lua")));
-        Long limite = (Long) redisTemplate.execute(script, Arrays.asList("limite"), 10, 20);
+        redisTemplate.opsForValue().set("123", 1);
+        Long limite = redisTemplate.execute(script, Collections.singletonList("limite"), 10, 20);
         return limite == 1 ? HttpResult.success("没被限流") : HttpResult.fail("被限流了");
     }
 }
