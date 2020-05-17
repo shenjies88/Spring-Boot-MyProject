@@ -105,16 +105,16 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-        <!--Redis分布式锁-->
-        <dependency>
-            <groupId>org.redisson</groupId>
-            <artifactId>redisson-spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.redisson</groupId>
-            <!-- for Spring Data Redis v.2.2.x -->
-            <artifactId>redisson-spring-data-22</artifactId>
-        </dependency>
+        <!--        &lt;!&ndash;Redis分布式锁&ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.redisson</groupId>-->
+        <!--            <artifactId>redisson-spring-boot-starter</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.redisson</groupId>-->
+        <!--            &lt;!&ndash; for Spring Data Redis v.2.2.x &ndash;&gt;-->
+        <!--            <artifactId>redisson-spring-data-22</artifactId>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <build>
