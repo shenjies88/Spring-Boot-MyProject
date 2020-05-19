@@ -8,30 +8,6 @@ spring:
     data: classpath:db/data.sql
     username: root
     password: password
-    druid:
-      # 最大连接
-      max-active: 20
-      # 初始连接数
-      initial-size: 1
-      # 获取连接最大等待时间
-      max-wait: 60000
-      # 最小连接数
-      min-idle: 1
-      # 监控统计用的filter:stat
-      # 日志用的filter:log4j
-      # 防御sql注入的filter:wall
-      filters: stat,wall,slf4j
-      # Destroy线程会检测连接的间隔时间
-      time-between-eviction-runs-millis: 60000
-      # 保持空闲连接不被驱逐最少时间
-      min-evictable-idle-time-millis: 300000
-      test-while-idle: true
-      test-on-borrow: false
-      test-on-return: false
-      # 缓存ps，mysql建议关闭
-      pool-prepared-statements: false
-      max-open-prepared-statements: 20
-      async-init: true
   h2:
     console:
       enabled: true
