@@ -1,30 +1,12 @@
 spring:
   application:
     name: springboot-practice
-  datasource:
-    url: jdbc:h2:mem:spring_boot;DATABASE_TO_UPPER=false;MODE=MYSQL;
-    platform: h2
-    schema: classpath:db/schema.sql
-    data: classpath:db/data.sql
-    username: root
-    password: password
-  h2:
-    console:
-      enabled: true
-  http:
+
+server:
+  servlet:
     encoding:
       force: true
-#  redis:
-#    host: 127.0.0.1
-#    database: 0
-#    port: 6379
-#    timeout: 5000ms
-#    lettuce:
-#      pool:
-#        max-active: 50
-#        min-idle: 5
-#    redisson:
-#      config: classpath:redisson.yaml
+  shutdown: graceful
 
 # 自动配置
 hello-world:
@@ -32,17 +14,6 @@ hello-world:
   name: 'Foo'
   age: 20
   sex: 'm'
-
-# 分页助手
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-
-# mybatis
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
 
 # 日志
 logging:

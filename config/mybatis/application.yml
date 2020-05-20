@@ -1,0 +1,10 @@
+# 分页助手
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+
+# mybatis
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
