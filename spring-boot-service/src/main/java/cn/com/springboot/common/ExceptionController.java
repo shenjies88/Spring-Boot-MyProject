@@ -18,7 +18,6 @@ public class ExceptionController {
 
     @ExceptionHandler(IllegalArgumentException.class)
     public HttpResult handIllegalArgumentException(IllegalArgumentException e) {
-        log.error("业务异常:", e);
         return HttpResult.fail(e.getMessage());
     }
 
