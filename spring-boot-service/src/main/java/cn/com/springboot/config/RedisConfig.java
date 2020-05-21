@@ -5,19 +5,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceClientConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
-import org.springframework.data.redis.connection.lettuce.LettucePoolingClientConfiguration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-
-import java.time.Duration;
 
 /**
  * @author shenjies88
@@ -26,17 +20,9 @@ import java.time.Duration;
 @Configuration
 public class RedisConfig {
 
-    @Value("${spring.redis.timeout}")
-    private long timeout;
-
-    @Value("${spring.redis.lettuce.pool.min-idle}")
-    private int minIdle;
-
-    @Value("${spring.redis.lettuce.pool.max-active}")
-    private int maxActive;
-
+    @Primary
     @Bean
-    public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory factory) {
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(factory);
         //配置序列化
@@ -45,25 +31,6 @@ public class RedisConfig {
         redisTemplate.setHashKeySerializer(jackson2JsonRedisSerializer);
         redisTemplate.setDefaultSerializer(jackson2JsonRedisSerializer);
         return redisTemplate;
-    }
-
-    @Bean
-    public LettuceConnectionFactory factory() {
-        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
-        LettuceClientConfiguration clientConfig = LettucePoolingClientConfiguration.builder()
-                .commandTimeout(Duration.ofMillis(timeout))
-                .poolConfig(genericObjectPoolConfig())
-                .build();
-
-        return new LettuceConnectionFactory(redisStandaloneConfiguration, clientConfig);
-    }
-
-    @Bean
-    public GenericObjectPoolConfig genericObjectPoolConfig() {
-        GenericObjectPoolConfig genericObjectPoolConfig = new GenericObjectPoolConfig();
-        genericObjectPoolConfig.setMinIdle(minIdle);
-        genericObjectPoolConfig.setMaxTotal(maxActive);
-        return genericObjectPoolConfig;
     }
 
     private Jackson2JsonRedisSerializer jacksonSerializer() {

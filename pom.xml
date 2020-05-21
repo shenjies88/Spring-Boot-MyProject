@@ -89,12 +89,6 @@
                 <artifactId>redisson-spring-data-22</artifactId>
                 <version>3.12.4</version>
             </dependency>
-            <!--Redis连接池-->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>2.8.0</version>
-            </dependency>
             <!--excel解析-->
             <dependency>
                 <groupId>com.github.crab2died</groupId>
