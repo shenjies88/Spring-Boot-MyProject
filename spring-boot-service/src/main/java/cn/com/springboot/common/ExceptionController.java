@@ -16,19 +16,24 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice("cn.com.springboot")
 public class ExceptionController {
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public HttpResult handIllegalArgumentException(IllegalArgumentException e) {
+        log.error("业务异常:", e);
+        return HttpResult.fail(e.getMessage());
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public HttpResult handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
-        var className = e.getClass().getSimpleName();
+        log.error("校验异常", e);
         var bindingResult = e.getBindingResult();
         var errorMessage = new StringBuilder("参数校验失败: ");
         bindingResult.getFieldErrors().forEach(fieldError -> errorMessage.append(fieldError.getDefaultMessage()).append(" "));
-        log.error(className, e);
         return HttpResult.fail(errorMessage.toString());
     }
 
     @ExceptionHandler(Exception.class)
     public HttpResult<String> exceptionHandler(Exception e) {
-        log.error("通用错误处理", e);
+        log.error("通用异常", e);
         return HttpResult.fail("服务器繁忙");
     }
 }
