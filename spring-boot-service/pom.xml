@@ -105,6 +105,11 @@
         <!--            &lt;!&ndash; for Spring Data Redis v.2.2.x &ndash;&gt;-->
         <!--            <artifactId>redisson-spring-data-22</artifactId>-->
         <!--        </dependency>-->
+        <!--excel解析-->
+        <dependency>
+            <groupId>com.github.crab2died</groupId>
+            <artifactId>Excel4J</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

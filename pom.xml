@@ -89,6 +89,12 @@
                 <artifactId>redisson-spring-data-22</artifactId>
                 <version>3.12.4</version>
             </dependency>
+            <!--excel解析-->
+            <dependency>
+                <groupId>com.github.crab2died</groupId>
+                <artifactId>Excel4J</artifactId>
+                <version>3.0.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
