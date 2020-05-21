@@ -95,16 +95,11 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-        <!--        &lt;!&ndash;Redis分布式锁&ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.redisson</groupId>-->
-        <!--            <artifactId>redisson-spring-boot-starter</artifactId>-->
-        <!--        </dependency>-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.redisson</groupId>-->
-        <!--            &lt;!&ndash; for Spring Data Redis v.2.2.x &ndash;&gt;-->
-        <!--            <artifactId>redisson-spring-data-22</artifactId>-->
-        <!--        </dependency>-->
+        <!--Redis连接池-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
         <!--excel解析-->
         <dependency>
             <groupId>com.github.crab2died</groupId>
