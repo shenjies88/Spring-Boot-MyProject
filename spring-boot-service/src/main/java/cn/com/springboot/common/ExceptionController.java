@@ -27,12 +27,8 @@ public class ExceptionController {
     }
 
     @ExceptionHandler(Exception.class)
-    public HttpResult exceptionHandler(Exception e) {
-        var message = e.getMessage();
-        if (message == null) {
-            message = e.getClass().getSimpleName();
-        }
-        log.error(message, e);
-        return HttpResult.fail(message);
+    public HttpResult<String> exceptionHandler(Exception e) {
+        log.error("通用错误处理", e);
+        return HttpResult.fail("服务器繁忙");
     }
 }

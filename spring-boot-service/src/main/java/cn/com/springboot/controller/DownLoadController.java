@@ -1,22 +1,25 @@
 package cn.com.springboot.controller;
 
+import cn.com.springboot.HttpResult;
 import cn.com.springboot.vo.ExcelVo;
-import com.alibaba.fastjson.JSON;
 import com.github.crab2died.ExcelUtils;
 import com.github.crab2died.exceptions.Excel4JException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.Assert;
+import org.springframework.util.ResourceUtils;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -25,25 +28,34 @@ import java.util.List;
  */
 @Slf4j
 @Api(tags = "上传下载")
+@RequestMapping("/file")
 @RestController
 public class DownLoadController {
 
-    @ApiOperation("上传下载")
-    @PostMapping("upload-download")
-    public void downLoad(@RequestParam(value = "file") MultipartFile file,
-                         HttpServletResponse response) {
-        try {
-            String fileName = file.getOriginalFilename();
-            List<ExcelVo> excelVos = ExcelUtils.getInstance().readExcel2Objects(file.getInputStream(), ExcelVo.class);
-            if (CollectionUtils.isEmpty(excelVos)) {
-                throw new RuntimeException("转换对象失败或无数据");
-            }
-            excelVos.forEach(e -> log.info(JSON.toJSONString(e)));
-            response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8));
-            response.setContentType("application/x-download;charset=UTF-8");
-            ExcelUtils.getInstance().exportObjects2Excel(excelVos, ExcelVo.class, response.getOutputStream());
-        } catch (IOException | Excel4JException e) {
-            log.info("读取文件流异常", e);
-        }
+    @ApiOperation("解析")
+    @PostMapping("/parsing")
+    public HttpResult<List<ExcelVo>> parsing(@RequestParam(value = "file") MultipartFile file) throws IOException, Excel4JException {
+        List<ExcelVo> result = ExcelUtils.getInstance().readExcel2Objects(file.getInputStream(), ExcelVo.class);
+        return HttpResult.success(result);
+    }
+
+    @ApiOperation("上传文件")
+    @PostMapping("/upload")
+    public HttpResult upload(@RequestParam(value = "file") MultipartFile file) throws IOException {
+        String filename = file.getOriginalFilename();
+        Assert.hasText(filename, "文件名不能为空");
+        Assert.isTrue(file.getBytes().length != 0, "文件内容不能为空");
+        Path path = Paths.get("./spring-boot-service/src/main/resources/" + filename);
+        Files.copy(file.getInputStream(), path);
+        return HttpResult.success();
+    }
+
+    @ApiOperation("下载")
+    @GetMapping("/download")
+    public void downLoad(HttpServletResponse response) throws IOException {
+        File file = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "上传下载测试.xlsx");
+        response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(file.getName(), StandardCharsets.UTF_8));
+        response.setContentType("application/x-download;charset=UTF-8");
+        Files.copy(file.toPath(), response.getOutputStream());
     }
 }
