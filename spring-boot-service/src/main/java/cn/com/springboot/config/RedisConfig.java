@@ -29,17 +29,11 @@ public class RedisConfig {
     @Value("${spring.redis.timeout}")
     private long timeout;
 
-    @Value("${spring.redis.lettuce.pool.max-idle}")
-    private int maxIdle;
-
     @Value("${spring.redis.lettuce.pool.min-idle}")
     private int minIdle;
 
     @Value("${spring.redis.lettuce.pool.max-active}")
     private int maxActive;
-
-    @Value("${spring.redis.lettuce.pool.max-wait}")
-    private long maxWait;
 
     @Bean
     public RedisTemplate<String, Object> redisTemplate(LettuceConnectionFactory factory) {
@@ -67,10 +61,8 @@ public class RedisConfig {
     @Bean
     public GenericObjectPoolConfig genericObjectPoolConfig() {
         GenericObjectPoolConfig genericObjectPoolConfig = new GenericObjectPoolConfig();
-        genericObjectPoolConfig.setMaxIdle(maxIdle);
         genericObjectPoolConfig.setMinIdle(minIdle);
         genericObjectPoolConfig.setMaxTotal(maxActive);
-        genericObjectPoolConfig.setMaxWaitMillis(maxWait);
         return genericObjectPoolConfig;
     }
 

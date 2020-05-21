@@ -4,6 +4,8 @@ import cn.com.springboot.HttpResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -29,18 +31,18 @@ public class RedisController {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
 
+    @Autowired
+    private RedissonClient redisson;
+
     @ApiOperation("Redis Lock")
     @GetMapping("/lock")
     public HttpResult<String> lock() {
+        RLock lock = redisson.getLock("myLock");
         try {
-            Boolean lock = redisTemplate.opsForValue().setIfAbsent("lock", 1, 3, TimeUnit.SECONDS);
-            if (!lock) {
-                Thread.sleep(4000);
-            }
-            lock = redisTemplate.opsForValue().setIfAbsent("lock", 1, 3, TimeUnit.SECONDS);
-            return lock ? HttpResult.success("抢到锁了") : HttpResult.fail("没抢到锁");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            boolean res = lock.tryLock(10, 4, TimeUnit.SECONDS);
+            return res ? HttpResult.success("抢到锁了") : HttpResult.fail("没抢到锁");
+        } catch (Exception e) {
+            lock.unlock();
         }
         return HttpResult.success("Lock");
     }
