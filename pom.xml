@@ -81,13 +81,7 @@
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>3.12.4</version>
-            </dependency>
-            <dependency>
-                <groupId>org.redisson</groupId>
-                <!-- for Spring Data Redis v.2.2.x -->
-                <artifactId>redisson-spring-data-22</artifactId>
-                <version>3.12.4</version>
+                <version>3.13.0</version>
             </dependency>
             <!--excel解析-->
             <dependency>

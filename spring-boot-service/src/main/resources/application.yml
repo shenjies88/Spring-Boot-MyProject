@@ -8,6 +8,11 @@ server:
       force: true
   shutdown: graceful
 
+management:
+  endpoints:
+    enabled-by-default: false
+
+
 # 自动配置
 hello-world:
   enabled: true
