@@ -1,4 +1,13 @@
-singleServerConfig:
-  address: "redis://127.0.0.1:6379"
+#singleServerConfig:
+#  address: "redis://127.0.0.1:6379"
+#  subscriptionConnectionMinimumIdleSize: 0
+#  connectionMinimumIdleSize: 5
+sentinelServersConfig:
   subscriptionConnectionMinimumIdleSize: 0
-  connectionMinimumIdleSize: 5
+  slaveConnectionMinimumIdleSize: 5
+  slaveConnectionPoolSize: 50
+  masterConnectionMinimumIdleSize: 5
+  masterConnectionPoolSize: 50
+  sentinelAddresses:
+    - "redis://192.168.56.10:26379"
+  masterName: "mymaster"
