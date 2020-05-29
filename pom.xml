@@ -14,7 +14,6 @@
 
     <modules>
         <module>spring-boot-service</module>
-        <module>spring-boot-interface</module>
         <module>spring-boot-starter</module>
     </modules>
 
@@ -119,8 +118,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>14</source>
-                    <target>14</target>
+                    <source>13</source>
+                    <target>13</target>
                 </configuration>
             </plugin>
         </plugins>

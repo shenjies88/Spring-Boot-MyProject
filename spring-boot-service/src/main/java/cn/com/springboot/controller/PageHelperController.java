@@ -1,9 +1,9 @@
 package cn.com.springboot.controller;
 
-import cn.com.springboot.HttpResult;
 import cn.com.springboot.entity.PageHelperDo;
 import cn.com.springboot.mapper.PageHelperMapper;
 import cn.com.springboot.utils.PageUtils;
+import cn.com.springboot.vo.HttpResult;
 import cn.com.springboot.vo.PageResultVo;
 import cn.com.springboot.vo.PageVo;
 import io.swagger.annotations.Api;

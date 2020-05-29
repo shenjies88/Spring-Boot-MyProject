@@ -1,6 +1,6 @@
 package cn.com.springboot.common;
 
-import cn.com.springboot.HttpResult;
+import cn.com.springboot.vo.HttpResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;

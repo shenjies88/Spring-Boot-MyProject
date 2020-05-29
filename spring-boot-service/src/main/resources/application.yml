@@ -1,6 +1,19 @@
 spring:
   application:
     name: springboot-practice
+  datasource:
+    url: jdbc:h2:mem:spring_boot;DATABASE_TO_UPPER=false;MODE=MYSQL;
+    platform: h2
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+    username: root
+    password: password
+  h2:
+    console:
+      enabled: true
+  redis:
+    redisson:
+      config: classpath:redisson.yaml
 
 server:
   servlet:
@@ -11,6 +24,17 @@ server:
 management:
   endpoints:
     enabled-by-default: false
+
+# 分页助手
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+
+# mybatis
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
 
 
 # 自动配置
