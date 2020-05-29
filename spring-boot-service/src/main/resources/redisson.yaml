@@ -1,7 +1,7 @@
-#singleServerConfig:
-#  address: "redis://192.168.56.10:6379"
-#  subscriptionConnectionMinimumIdleSize: 0
-#  connectionMinimumIdleSize: 5
+singleServerConfig:
+  address: "redis://192.168.56.10:6381"
+  subscriptionConnectionMinimumIdleSize: 0
+  connectionMinimumIdleSize: 5
 #sentinelServersConfig:
 #  subscriptionConnectionMinimumIdleSize: 1
 #  slaveConnectionMinimumIdleSize: 5
@@ -11,14 +11,14 @@
 #  sentinelAddresses:
 #    - "redis://192.168.56.10:26379"
 #  masterName: "mymaster"
-clusterServersConfig:
-  slaveConnectionMinimumIdleSize: 5
-  slaveConnectionPoolSize: 50
-  masterConnectionMinimumIdleSize: 5
-  masterConnectionPoolSize: 50
-  nodeAddresses:
-    - "redis://192.168.56.10:6389"
-    - "redis://192.168.56.10:6390"
-    - "redis://192.168.56.10:6391"
-    - "redis://192.168.56.10:6395"
-#    - "redis://redis-cluster:6379"
+#clusterServersConfig:
+#  slaveConnectionMinimumIdleSize: 5
+#  slaveConnectionPoolSize: 50
+#  masterConnectionMinimumIdleSize: 5
+#  masterConnectionPoolSize: 50
+#  nodeAddresses:
+#    - "redis://192.168.56.10:6389"
+#    - "redis://192.168.56.10:6390"
+#    - "redis://192.168.56.10:6391"
+#    - "redis://192.168.56.10:6395"
+##    - "redis://redis-cluster:6379"

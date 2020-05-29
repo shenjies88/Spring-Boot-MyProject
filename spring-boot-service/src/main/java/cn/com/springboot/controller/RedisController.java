@@ -39,12 +39,15 @@ public class RedisController {
     public HttpResult<String> lock() {
         RLock lock = redisson.getLock("myLock");
         try {
-            boolean res = lock.tryLock(10, 4, TimeUnit.SECONDS);
+            boolean res = lock.tryLock(7, 4, TimeUnit.SECONDS);
             return res ? HttpResult.success("抢到锁了") : HttpResult.fail("没抢到锁");
         } catch (Exception e) {
-            lock.unlock();
+            if (lock.isLocked()) {
+                lock.unlock();
+            }
+            log.error(e.toString());
+            return HttpResult.fail("出现异常");
         }
-        return HttpResult.success("Lock");
     }
 
     @ApiOperation("Test Lua")
