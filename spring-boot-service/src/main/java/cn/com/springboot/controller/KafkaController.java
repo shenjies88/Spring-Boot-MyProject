@@ -25,11 +25,11 @@
 //    private KafkaTemplate<Object, Object> template;
 //
 //    @GetMapping("/send/{input}")
-//    public HttpResult sendFoo(@PathVariable String input) {
-//        this.template.send("topic_input", input);
-//        return HttpResult.success();
+//    public HttpResult<String> sendFoo(@PathVariable String input) {
+//        this.template.send("myTopic", input);
+//        return HttpResult.success(input);
 //    }
-//    @KafkaListener(id = "myGroup", topics = "topic_input",groupId = "1")
+//    @KafkaListener(id = "myGroup", topics = "myTopic",groupId = "1")
 //    public void listen(String input) {
 //        log.info("input value: {}" , input);
 //    }
