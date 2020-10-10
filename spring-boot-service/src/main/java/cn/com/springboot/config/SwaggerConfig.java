@@ -1,6 +1,6 @@
 package cn.com.springboot.config;
 
-import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -13,7 +13,7 @@ import java.util.Objects;
 /**
  * @author shenjies88
  */
-@EnableSwaggerBootstrapUI
+@EnableKnife4j
 @EnableSwagger2
 @Configuration
 public class SwaggerConfig {
@@ -22,7 +22,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("cn.com.springboot"))
+                .apis(RequestHandlerSelectors.basePackage("cn.com.springboot.controller"))
                 .paths(path -> !Objects.equals(path, "/error"))
                 .build();
     }
