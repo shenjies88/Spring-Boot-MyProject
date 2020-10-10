@@ -15,13 +15,13 @@ import org.springframework.web.servlet.handler.MappedInterceptor;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    private MyIntercept myIntercept;
+    private final MyIntercept myIntercept;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         String[] includes = new String[]{"/mybatis/**"};
         String[] exclude = new String[]{};
-        var mappedInterceptor = new MappedInterceptor(includes, exclude, myIntercept);
+        MappedInterceptor mappedInterceptor = new MappedInterceptor(includes, exclude, myIntercept);
         registry.addInterceptor(mappedInterceptor);
     }
 

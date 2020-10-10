@@ -34,7 +34,7 @@ public class MybatisController {
     @ApiOperation("返回对象")
     @GetMapping("/query")
     public HttpResult<MybatisDo> query(@RequestParam(name = "code") String code) {
-        var mybatisEntity = mybatisService.queryByCode(code);
+        MybatisDo mybatisEntity = mybatisService.queryByCode(code);
         return HttpResult.success(mybatisEntity);
     }
 
