@@ -91,11 +91,6 @@
                 <artifactId>spring-kafka</artifactId>
                 <version>2.5.1.RELEASE</version>
             </dependency>
-            <dependency>
-                <groupId>co.elastic.apm</groupId>
-                <artifactId>apm-agent-attach</artifactId>
-                <version>1.17.0</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -1,6 +1,10 @@
 spring:
   application:
     name: spring-boot-practice
+  devtools:
+    restart:
+      poll-interval: 500ms
+      quiet-period: 100ms
   datasource:
     url: jdbc:h2:mem:spring_boot;DATABASE_TO_UPPER=false;MODE=MYSQL;
     platform: h2

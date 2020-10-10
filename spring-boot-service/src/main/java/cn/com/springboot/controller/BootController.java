@@ -31,7 +31,7 @@ public class BootController {
     @ApiOperation("webClient")
     @GetMapping("/web-client")
     public HttpResult<String> webClient() {
-        WebClient client = WebClient.create("http://localhost:8080");
+        WebClient client = WebClient.create("http://127.0.0.1:8080");
         return client.get()
                 .uri("/boot")
                 .accept(MediaType.APPLICATION_JSON)

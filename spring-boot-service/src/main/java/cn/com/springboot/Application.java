@@ -1,6 +1,5 @@
 package cn.com.springboot;
 
-import co.elastic.apm.attach.ElasticApmAttacher;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,6 @@ public class Application {
     private static HelloWorld helloWorld;
 
     public static void main(String[] args) {
-        ElasticApmAttacher.attach();
         SpringApplication.run(Application.class, args);
 
         if (helloWorld != null) {
