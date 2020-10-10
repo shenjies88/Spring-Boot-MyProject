@@ -21,7 +21,7 @@ public class PageResultVo<T> {
 
     private List<T> list;
 
-
+    @SuppressWarnings("unchecked")
     public static <T> PageResultVo<T> format(List<T> list, Long count, Integer pageNum, Integer pageSize) {
         return new PageResultVo(count, pageNum, pageSize, list);
     }

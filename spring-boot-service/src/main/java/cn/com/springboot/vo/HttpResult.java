@@ -32,7 +32,7 @@ public class HttpResult<T> {
      */
     private T data;
 
-    public static HttpResult success() {
+    public static HttpResult<Void> success() {
         return new HttpResult<>(0, true, "success", null);
     }
 
@@ -40,7 +40,7 @@ public class HttpResult<T> {
         return new HttpResult<>(0, true, "success", data);
     }
 
-    public static HttpResult fail(String message) {
+    public static HttpResult<Void> fail(String message) {
         return new HttpResult<>(1, false, message, null);
     }
 }

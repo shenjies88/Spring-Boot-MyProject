@@ -34,7 +34,7 @@ public class ApiAspect {
         String methodName = joinPoint.getSignature().getName();
         //拼接日志内容
         StringBuilder messageBuf = new StringBuilder();
-        System.out.println("====================  请求开始  ==================");
+        log.info("====================  请求开始  ==================");
         messageBuf.append(className);
         messageBuf.append("\r\n接口名称").append(methodName);
         messageBuf.append("\r\n请求参数: ");
@@ -65,8 +65,8 @@ public class ApiAspect {
         }
 
         log.info(message);
-        System.out.println("====================  请求结束  ==================");
-        System.out.println();
+        log.info("====================  请求结束  ==================");
+        log.info("\n");
     }
 
     @Around(value = "pointcut()")

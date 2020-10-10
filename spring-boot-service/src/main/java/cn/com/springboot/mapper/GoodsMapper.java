@@ -2,11 +2,13 @@ package cn.com.springboot.mapper;
 
 import cn.com.springboot.entity.GoodsDo;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author shenjies88
  * @since 2020/5/12-8:10 PM
  */
+@Repository
 public interface GoodsMapper {
 
     /**

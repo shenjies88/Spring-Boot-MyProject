@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ExceptionController {
 
     @ExceptionHandler(IllegalArgumentException.class)
-    public HttpResult handIllegalArgumentException(IllegalArgumentException e) {
+    public HttpResult<Void> handIllegalArgumentException(IllegalArgumentException e) {
         return HttpResult.fail(e.getMessage());
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public HttpResult handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+    public HttpResult<Void> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         log.error("校验异常", e);
         BindingResult bindingResult = e.getBindingResult();
         StringBuilder errorMessage = new StringBuilder("参数校验失败: ");
@@ -32,7 +32,7 @@ public class ExceptionController {
     }
 
     @ExceptionHandler(Exception.class)
-    public HttpResult<String> exceptionHandler(Exception e) {
+    public HttpResult<Void> exceptionHandler(Exception e) {
         log.error("通用异常", e);
         return HttpResult.fail("服务器繁忙");
     }

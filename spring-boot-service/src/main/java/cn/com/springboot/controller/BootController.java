@@ -32,13 +32,12 @@ public class BootController {
     @GetMapping("/web-client")
     public HttpResult<String> webClient() {
         WebClient client = WebClient.create("http://localhost:8080");
-        HttpResult<String> result = client.get()
+        return client.get()
                 .uri("/boot")
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .bodyToMono(new ParameterizedTypeReference<HttpResult<String>>() {
                 })
                 .block();
-        return result;
     }
 }

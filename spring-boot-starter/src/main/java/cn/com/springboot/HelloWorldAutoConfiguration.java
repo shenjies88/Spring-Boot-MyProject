@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class HelloWorldAutoConfiguration {
 
-    private HelloWorldProperties helloWorldProperties;
+    private final HelloWorldProperties helloWorldProperties;
 
     @Autowired
     public HelloWorldAutoConfiguration(HelloWorldProperties helloWorldProperties) {

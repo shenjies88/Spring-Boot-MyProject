@@ -41,7 +41,7 @@ public class DownLoadController {
 
     @ApiOperation("上传文件")
     @PostMapping("/upload")
-    public HttpResult upload(@RequestParam(value = "file") MultipartFile file) throws IOException {
+    public HttpResult<Void> upload(@RequestParam(value = "file") MultipartFile file) throws IOException {
         String filename = file.getOriginalFilename();
         Assert.hasText(filename, "文件名不能为空");
         Assert.isTrue(file.getBytes().length != 0, "文件内容不能为空");
