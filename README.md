@@ -1,8 +1,9 @@
 # Spring Boot脚手架实践
 ## 环境要求
-- `JDK14`
+- `JDK15`
 - 构建工具`maven`
-- 请在`settings.xml`文件内配置`JAVA_14_HOME` [请参考](https://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html)
+- 请在`settings.xml`
+  文件内配置`JAVA_15_HOME` [请参考](https://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html)
 ## Starter模块
 - 自动配置demo
 ## 技术栈

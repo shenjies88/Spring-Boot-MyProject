@@ -20,14 +20,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>2.4.1</version>
     </parent>
 
     <properties>
         <encode>UTF-8</encode>
         <project.reporting.outputEncoding>${encode}</project.reporting.outputEncoding>
         <project.build.sourceEncoding>${encode}</project.build.sourceEncoding>
-        <java.version>14</java.version>
+        <java.version>15</java.version>
     </properties>
 
     <dependencyManagement>
@@ -67,7 +67,7 @@
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
-                <version>3.13.5</version>
+                <version>3.14.1</version>
             </dependency>
             <!--excel解析-->
             <dependency>
@@ -102,7 +102,7 @@
                 <configuration>
                     <compilerArgument>-Xlint:unchecked</compilerArgument>
                     <fork>true</fork>
-                    <executable>${JAVA_14_HOME}/bin/javac</executable>
+                    <executable>${JAVA_15_HOME}/bin/javac</executable>
                 </configuration>
             </plugin>
         </plugins>
