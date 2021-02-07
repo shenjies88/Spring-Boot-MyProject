@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Data
 @AllArgsConstructor
-public class PageResultVo<T> {
+public class PageResultVO<T> {
 
     private Long count;
 
@@ -22,7 +22,7 @@ public class PageResultVo<T> {
     private List<T> list;
 
     @SuppressWarnings("unchecked")
-    public static <T> PageResultVo<T> format(List<T> list, Long count, Integer pageNum, Integer pageSize) {
-        return new PageResultVo(count, pageNum, pageSize, list);
+    public static <T> PageResultVO<T> format(List<T> list, Long count, Integer pageNum, Integer pageSize) {
+        return new PageResultVO(count, pageNum, pageSize, list);
     }
 }

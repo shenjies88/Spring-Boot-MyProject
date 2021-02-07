@@ -14,7 +14,7 @@ import javax.validation.constraints.Min;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PageVo {
+public class PageVO {
 
     @Min(1)
     @ApiModelProperty(example = "1")

@@ -1,6 +1,6 @@
 //package cn.com.springboot.controller;
 //
-//import cn.com.springboot.vo.HttpResult;
+//import cn.com.springboot.vo.HttpResultVO;
 //import io.swagger.annotations.Api;
 //import io.swagger.annotations.ApiOperation;
 //import lombok.extern.slf4j.Slf4j;
@@ -36,28 +36,28 @@
 //
 //    @ApiOperation("Redis Lock")
 //    @GetMapping("/lock")
-//    public HttpResult<String> lock() {
+//    public HttpResultVO<String> lock() {
 //        RLock lock = redisson.getLock("myLock");
 //        try {
 //            boolean res = lock.tryLock(7, 4, TimeUnit.SECONDS);
-//            return res ? HttpResult.success("抢到锁了") : HttpResult.fail("没抢到锁");
+//            return res ? HttpResultVO.success("抢到锁了") : HttpResultVO.fail("没抢到锁");
 //        } catch (Exception e) {
 //            if (lock.isLocked()) {
 //                lock.unlock();
 //            }
 //            log.error(e.toString());
-//            return HttpResult.fail("出现异常");
+//            return HttpResultVO.fail("出现异常");
 //        }
 //    }
 //
 //    @ApiOperation("Test Lua")
 //    @GetMapping("/test-lua")
-//    public HttpResult testLua() {
+//    public HttpResultVO testLua() {
 //        DefaultRedisScript<Long> script = new DefaultRedisScript();
 //        script.setResultType(Long.class);
 //        script.setScriptSource(new ResourceScriptSource(new
 //                ClassPathResource("limite.lua")));
 //        Long limite = redisTemplate.execute(script, Collections.singletonList("limite"), 10, 20);
-//        return limite == 1 ? HttpResult.success("没被限流") : HttpResult.fail("被限流了");
+//        return limite == 1 ? HttpResultVO.success("没被限流") : HttpResultVO.fail("被限流了");
 //    }
 //}

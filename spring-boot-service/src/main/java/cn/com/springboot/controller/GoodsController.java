@@ -1,7 +1,7 @@
 package cn.com.springboot.controller;
 
 import cn.com.springboot.service.GoodsService;
-import cn.com.springboot.vo.HttpResult;
+import cn.com.springboot.vo.HttpResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -25,17 +25,17 @@ public class GoodsController {
 
     @ApiOperation("乐观锁秒杀")
     @GetMapping("/optimism-spike-goods")
-    public HttpResult<Integer> optimismSpikeGoods(@ApiParam("商品名") @RequestParam String name,
-                                                  @ApiParam("用户名") @RequestParam String userName) {
+    public HttpResultVO<Integer> optimismSpikeGoods(@ApiParam("商品名") @RequestParam String name,
+                                                    @ApiParam("用户名") @RequestParam String userName) {
         Integer total = goodsService.optimismSpikeGoods(name, userName);
-        return HttpResult.success(total);
+        return HttpResultVO.success(total);
     }
 
     @ApiOperation("悲观锁秒杀")
     @GetMapping("/pessimistic-spike-goods")
-    public HttpResult<Integer> pessimisticSpikeGoods(@ApiParam("商品id") @RequestParam Integer id,
-                                                     @ApiParam("用户名") @RequestParam String userName) {
+    public HttpResultVO<Integer> pessimisticSpikeGoods(@ApiParam("商品id") @RequestParam Integer id,
+                                                       @ApiParam("用户名") @RequestParam String userName) {
         Integer total = goodsService.pessimisticSpikeGoods(id, userName);
-        return HttpResult.success(total);
+        return HttpResultVO.success(total);
     }
 }

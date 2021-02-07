@@ -1,7 +1,7 @@
 package cn.com.springboot.controller;
 
-import cn.com.springboot.vo.ExcelVo;
-import cn.com.springboot.vo.HttpResult;
+import cn.com.springboot.vo.ExcelVO;
+import cn.com.springboot.vo.HttpResultVO;
 import com.github.crab2died.ExcelUtils;
 import com.github.crab2died.exceptions.Excel4JException;
 import io.swagger.annotations.Api;
@@ -34,20 +34,20 @@ public class DownLoadController {
 
     @ApiOperation("解析")
     @PostMapping("/parsing")
-    public HttpResult<List<ExcelVo>> parsing(@RequestParam(value = "file") MultipartFile file) throws IOException, Excel4JException {
-        List<ExcelVo> result = ExcelUtils.getInstance().readExcel2Objects(file.getInputStream(), ExcelVo.class);
-        return HttpResult.success(result);
+    public HttpResultVO<List<ExcelVO>> parsing(@RequestParam(value = "file") MultipartFile file) throws IOException, Excel4JException {
+        List<ExcelVO> result = ExcelUtils.getInstance().readExcel2Objects(file.getInputStream(), ExcelVO.class);
+        return HttpResultVO.success(result);
     }
 
     @ApiOperation("上传文件")
     @PostMapping("/upload")
-    public HttpResult<Void> upload(@RequestParam(value = "file") MultipartFile file) throws IOException {
+    public HttpResultVO<Void> upload(@RequestParam(value = "file") MultipartFile file) throws IOException {
         String filename = file.getOriginalFilename();
         Assert.hasText(filename, "文件名不能为空");
         Assert.isTrue(file.getBytes().length != 0, "文件内容不能为空");
         Path path = Paths.get("./spring-boot-service/src/main/resources/" + filename);
         Files.copy(file.getInputStream(), path);
-        return HttpResult.success();
+        return HttpResultVO.success();
     }
 
     @ApiOperation("下载")

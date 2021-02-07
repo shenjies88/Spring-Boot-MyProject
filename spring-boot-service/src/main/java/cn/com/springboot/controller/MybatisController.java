@@ -2,7 +2,7 @@ package cn.com.springboot.controller;
 
 import cn.com.springboot.entity.MybatisDo;
 import cn.com.springboot.service.MybatisService;
-import cn.com.springboot.vo.HttpResult;
+import cn.com.springboot.vo.HttpResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -26,16 +26,16 @@ public class MybatisController {
 
     @ApiOperation("返回列表")
     @GetMapping("/list")
-    public HttpResult<List<MybatisDo>> list() {
+    public HttpResultVO<List<MybatisDo>> list() {
         List<MybatisDo> mybatisDoList = mybatisService.listEntity();
-        return HttpResult.success(mybatisDoList);
+        return HttpResultVO.success(mybatisDoList);
     }
 
     @ApiOperation("返回对象")
     @GetMapping("/query")
-    public HttpResult<MybatisDo> query(@RequestParam(name = "code") String code) {
+    public HttpResultVO<MybatisDo> query(@RequestParam(name = "code") String code) {
         MybatisDo mybatisEntity = mybatisService.queryByCode(code);
-        return HttpResult.success(mybatisEntity);
+        return HttpResultVO.success(mybatisEntity);
     }
 
 

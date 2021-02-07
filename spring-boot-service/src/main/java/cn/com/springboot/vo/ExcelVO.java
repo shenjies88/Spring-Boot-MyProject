@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @Data
 @ApiModel("Excel")
-public class ExcelVo {
+public class ExcelVO {
 
     /**
      * 学号

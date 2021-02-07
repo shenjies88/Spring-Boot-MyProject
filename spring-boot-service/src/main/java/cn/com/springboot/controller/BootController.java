@@ -1,6 +1,6 @@
 package cn.com.springboot.controller;
 
-import cn.com.springboot.vo.HttpResult;
+import cn.com.springboot.vo.HttpResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.core.ParameterizedTypeReference;
@@ -24,19 +24,19 @@ public class BootController {
 
     @ApiOperation("Boot")
     @GetMapping
-    public HttpResult<String> boot() {
-        return HttpResult.success("boot");
+    public HttpResultVO<String> boot() {
+        return HttpResultVO.success("boot");
     }
 
     @ApiOperation("webClient")
     @GetMapping("/web-client")
-    public HttpResult<String> webClient() {
+    public HttpResultVO<String> webClient() {
         WebClient client = WebClient.create("http://127.0.0.1:8080");
         return client.get()
                 .uri("/boot")
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
-                .bodyToMono(new ParameterizedTypeReference<HttpResult<String>>() {
+                .bodyToMono(new ParameterizedTypeReference<HttpResultVO<String>>() {
                 })
                 .block();
     }
