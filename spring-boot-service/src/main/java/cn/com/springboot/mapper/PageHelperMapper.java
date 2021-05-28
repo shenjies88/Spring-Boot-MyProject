@@ -1,7 +1,7 @@
 package cn.com.springboot.mapper;
 
 import cn.com.springboot.entity.PageHelperDo;
-import cn.com.springboot.vo.PageVO;
+import cn.com.springboot.vo.PageReqVO;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -19,5 +19,5 @@ public interface PageHelperMapper {
      * @param pageVo 分页请求
      * @return 实体列表
      */
-    List<PageHelperDo> getList(PageVO pageVo);
+    List<PageHelperDo> getList(PageReqVO pageVo);
 }

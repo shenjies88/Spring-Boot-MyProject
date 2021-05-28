@@ -4,8 +4,8 @@ import cn.com.springboot.entity.PageHelperDo;
 import cn.com.springboot.mapper.PageHelperMapper;
 import cn.com.springboot.utils.PageUtils;
 import cn.com.springboot.vo.HttpResultVO;
+import cn.com.springboot.vo.PageReqVO;
 import cn.com.springboot.vo.PageResultVO;
-import cn.com.springboot.vo.PageVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +31,7 @@ public class PageHelperController {
 
     @ApiOperation("实践")
     @PostMapping
-    public HttpResultVO<PageResultVO<PageHelperDo>> pagehelper(@RequestBody @Validated PageVO pageVo) {
+    public HttpResultVO<PageResultVO<PageHelperDo>> pagehelper(@RequestBody @Validated PageReqVO pageVo) {
         return HttpResultVO.success(PageUtils.paging(pageVo, pageHelperMapper::getList));
     }
 }

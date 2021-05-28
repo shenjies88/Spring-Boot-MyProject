@@ -9,18 +9,17 @@ import javax.validation.constraints.Min;
 
 /**
  * @author shenjies88
- * @since 2020/1/12-12:38
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PageVO {
+public class PageReqVO {
 
     @Min(1)
-    @ApiModelProperty(example = "1")
-    private Integer pageNum = 1;
+    @ApiModelProperty(value = "页标", example = "1")
+    private Integer pageNum;
 
     @Min(1)
-    @ApiModelProperty(example = "10")
-    private Integer pageSize = 10;
+    @ApiModelProperty(value = "分页数", example = "10")
+    private Integer pageSize;
 }
